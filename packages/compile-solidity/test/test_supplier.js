@@ -2,9 +2,9 @@ const debug = require("debug")("compile:test:test_supplier");
 const fse = require("fs-extra");
 const path = require("path");
 const assert = require("assert");
-const Resolver = require("@truffle/resolver");
-const compile = require("@truffle/compile-solidity/new");
-const Config = require("@truffle/config");
+const Resolver = require("@dune-network/resolver");
+const compile = require("@dune-network/compile-solidity/new");
+const Config = require("@dune-network/config");
 const { findOne } = require("./helpers");
 
 function waitSecond() {

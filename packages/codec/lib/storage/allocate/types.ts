@@ -1,7 +1,7 @@
-import * as Storage from "@truffle/codec/storage/types";
-import * as Ast from "@truffle/codec/ast/types";
-import * as Pointer from "@truffle/codec/pointer";
-import * as Format from "@truffle/codec/format";
+import * as Storage from "@dune-network/codec/storage/types";
+import * as Ast from "@dune-network/codec/ast/types";
+import * as Pointer from "@dune-network/codec/pointer";
+import * as Format from "@dune-network/codec/format";
 
 //holds a collection of storage allocations for structs
 export interface StorageAllocations {

@@ -3,7 +3,7 @@ const fs = require("fs");
 const request = require("request-promise");
 const sinon = require("sinon");
 const { VersionRange } = require("../../../compilerSupplier/loadingStrategies");
-const Config = require("@truffle/config");
+const Config = require("@dune-network/config");
 const config = Config.default();
 let versionRangeOptions = {
   events: config.events,

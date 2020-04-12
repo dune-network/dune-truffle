@@ -1,11 +1,11 @@
 const Web3 = require("web3");
-const { createInterfaceAdapter } = require("@truffle/interface-adapter");
-const expect = require("@truffle/expect");
-const TruffleError = require("@truffle/error");
-const Resolver = require("@truffle/resolver");
-const Artifactor = require("@truffle/artifactor");
+const { createInterfaceAdapter } = require("@dune-network/interface-adapter");
+const expect = require("@dune-network/expect");
+const TruffleError = require("@dune-network/error");
+const Resolver = require("@dune-network/resolver");
+const Artifactor = require("@dune-network/artifactor");
 const Ganache = require("ganache-core/public-exports");
-const Provider = require("@truffle/provider");
+const Provider = require("@dune-network/provider");
 
 const Environment = {
   // It's important config is a Config object and not a vanilla object

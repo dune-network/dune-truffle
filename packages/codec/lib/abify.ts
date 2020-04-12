@@ -1,15 +1,15 @@
 import debugModule from "debug";
 const debug = debugModule("codec:abify");
 
-import * as Format from "@truffle/codec/format";
-import * as Common from "@truffle/codec/common";
+import * as Format from "@dune-network/codec/format";
+import * as Common from "@dune-network/codec/common";
 import {
   CalldataDecoding,
   LogDecoding,
   ReturndataDecoding
-} from "@truffle/codec/types";
+} from "@dune-network/codec/types";
 import BN from "bn.js";
-import * as Conversion from "@truffle/codec/conversion";
+import * as Conversion from "@dune-network/codec/conversion";
 
 /** @category ABIfication */
 export function abifyType(

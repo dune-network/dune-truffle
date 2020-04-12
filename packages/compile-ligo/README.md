@@ -1,2 +1,2 @@
-# @truffle/compile-ligo
+# @dune-network/compile-ligo
 Ligo compiler interface for truffle.

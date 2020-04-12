@@ -1,4 +1,4 @@
-var TruffleError = require("@truffle/error");
+var TruffleError = require("@dune-network/error");
 var inherits = require("util").inherits;
 
 inherits(TaskError, TruffleError);

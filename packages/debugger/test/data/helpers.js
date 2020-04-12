@@ -5,7 +5,7 @@ import Ganache from "ganache-core";
 import { assert } from "chai";
 import changeCase from "change-case";
 import flatten from "lodash.flatten";
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 import { prepareContracts } from "test/helpers";
 

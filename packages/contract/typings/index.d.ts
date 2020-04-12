@@ -1,5 +1,5 @@
-declare module "@truffle/contract" {
-  import { ContractObject } from "@truffle/contract-schema";
+declare module "@dune-network/contract" {
+  import { ContractObject } from "@dune-network/contract-schema";
   namespace TruffleContract {
     export type Contract = ContractObject;
   }

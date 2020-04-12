@@ -5,7 +5,7 @@ import { combineReducers } from "redux";
 
 import * as actions from "./actions";
 
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 import { makeAssignment } from "lib/helpers";
 
 const DEFAULT_SCOPES = {

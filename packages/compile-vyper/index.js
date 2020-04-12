@@ -6,8 +6,8 @@ const async = require("async");
 const colors = require("colors");
 const minimatch = require("minimatch");
 
-const find_contracts = require("@truffle/contract-sources");
-const Profiler = require("@truffle/compile-solidity/profiler");
+const find_contracts = require("@dune-network/contract-sources");
+const Profiler = require("@dune-network/compile-solidity/profiler");
 
 const compiler = {
   name: "vyper",
@@ -16,7 +16,7 @@ const compiler = {
 
 const VYPER_PATTERN = "**/*.{vy,v.py,vyper.py}";
 
-// -------- TODO: Common with @truffle/compile-solidity --------
+// -------- TODO: Common with @dune-network/compile-solidity --------
 
 const compile = {};
 
@@ -73,7 +73,7 @@ compile.display = function(paths, options) {
   options.events.emit("compile:sourcesToCompile", sourceFileNames);
 };
 
-// -------- End of common with @truffle/compile-solidity --------
+// -------- End of common with @dune-network/compile-solidity --------
 
 // Check that vyper is available, save its version
 function checkVyper(callback) {

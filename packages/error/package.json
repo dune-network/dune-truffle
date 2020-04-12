@@ -1,10 +1,10 @@
 {
-  "name": "@truffle/error",
+  "name": "@dune-network/error",
   "version": "0.1.0-tezos.0",
   "description": "Simple module that allows native Error objects to be extended",
   "main": "index.js",
   "scripts": {},
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/error",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/error",
   "keywords": [
     "ethereum",
     "truffle",
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/trufflesuite/truffle"
   },
-  "homepage": "https://github.com/trufflesuite/truffle/tree/master/packages/error#readme",
+  "homepage": "https://github.com/dune-network/truffle/tree/master/packages/error#readme",
   "publishConfig": {
     "access": "public"
   }

@@ -1,12 +1,12 @@
 var assert = require("chai").assert;
 var fs = require("fs-extra");
 var glob = require("glob");
-var Box = require("@truffle/box");
-var Contracts = require("@truffle/workflow-compile");
+var Box = require("@dune-network/box");
+var Contracts = require("@dune-network/workflow-compile");
 var Ganache = require("ganache-core");
-var provision = require("@truffle/provisioner");
-var Resolver = require("@truffle/resolver");
-var Artifactor = require("@truffle/artifactor");
+var provision = require("@dune-network/provisioner");
+var Resolver = require("@dune-network/resolver");
+var Artifactor = require("@dune-network/artifactor");
 
 describe("config", function() {
   var config;

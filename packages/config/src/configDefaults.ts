@@ -1,6 +1,6 @@
 import assignIn from "lodash.assignin";
 import * as path from "path";
-import Provider from "@truffle/provider";
+import Provider from "@dune-network/provider";
 import TruffleConfig from "./";
 
 export const getInitialConfig = ({

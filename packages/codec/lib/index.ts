@@ -4,12 +4,12 @@
  * This module provides low-level decoding and encoding functionality for
  * Solidity and the Solidity ABI.  Many parts of this module are intended
  * primarily for internal use by Truffle and so remain largely undocumented,
- * but some of its types are also output by @truffle/decoder, which provides
+ * but some of its types are also output by @dune-network/decoder, which provides
  * a higher-level interface to much of this module's functionality.
  *
  * ## If you're here from Truffle Decoder
  *
- * If you're coming here from [[@truffle/decoder]], you probably just want to
+ * If you're coming here from [[@dune-network/decoder]], you probably just want to
  * know about the parts that are relevant to you.  These are:
  *
  * * The "data" category (specifically [[Format]])
@@ -30,8 +30,8 @@
  * generator.  This generator's `next()` function may return a finished
  * result, or it may return a request for more information.  It is up to
  * the caller to fulfill these requests -- say, by making a network
- * connection of its own.  This is how @truffle/decoder works; @truffle/codec
- * makes requests, and @truffle/decoder fulfills them by
+ * connection of its own.  This is how @dune-network/decoder works; @dune-network/codec
+ * makes requests, and @dune-network/decoder fulfills them by
  * looking up the necessary information on the blockchain.
  *
  * This library also provides additional functionality beyond what's used by
@@ -44,12 +44,12 @@
  * currently does not (although this is planned for the future).
  *
  * There is also functionality for decoding return values and revert messages
- * that goes beyond what's currently available in @truffle/decoder; this may get
+ * that goes beyond what's currently available in @dune-network/decoder; this may get
  * a better interface in the future.
  *
  * ## How to use
  *
- * You should probably use [[@truffle/decoder]] instead, if your use case doesn't
+ * You should probably use [[@dune-network/decoder]] instead, if your use case doesn't
  * preclude it.  This module has little documentation, where it has any at all,
  * and it's likely that parts of its interface may change (particularly
  * regarding allocation).  That said, if you truly need the functionality here,
@@ -57,7 +57,7 @@
  * (and perhaps Truffle Debugger as well, though that code is much harder to
  * read or copy).
  *
- * @module @truffle/codec
+ * @module @dune-network/codec
  */ /** */
 
 import "source-map-support/register";
@@ -65,7 +65,7 @@ import "source-map-support/register";
 //So, what shall codec export...?
 
 //First: export the data format
-import * as Format from "@truffle/codec/format";
+import * as Format from "@dune-network/codec/format";
 export {
   /**
 # Codec Output Format
@@ -74,7 +74,7 @@ export {
 
 This module primarily defines TypeScript types for the output format
 used in results provided by packages
-`@truffle/decoder@^4.0.0` and `@truffle/codec@^0.1.0`.
+`@dune-network/decoder@^4.0.0` and `@dune-network/codec@^0.1.0`.
 
 See below for complete listing or continue reading
 [Format information](#format-information) to learn about this format.
@@ -85,10 +85,10 @@ Import either as part of Codec or by itself:
 
 ```typescript
 // when importing entire Codec, use Codec.Format.*:
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 // or import Format directly:
-import { Format } from "@truffle/codec";
+import { Format } from "@dune-network/codec";
 ```
 
 ![Example struct decoding](media://example-struct-decoding.png)
@@ -150,7 +150,7 @@ Individual decoded values are represented by objects of the type
     more information.
 
   5. `reference`: This field is a debugger-only feature and does not
-     apply to results returned by  @truffle/decoder, so it won't be documented here.
+     apply to results returned by  @dune-network/decoder, so it won't be documented here.
 
 ### Values vs. errors
 
@@ -185,18 +185,18 @@ reasons why supporting out-of-range enums as a value would be difficult.)
 There are three special cases here that are likely worthy of note.
 
 Firstly, internal function pointers currently can't be meaningfully
-decoded via @truffle/decoder.  However, they decode to a bare-bones value,
+decoded via @dune-network/decoder.  However, they decode to a bare-bones value,
 not an error, as it is (in a sense) our own fault that we can't decode
 these, so it doesn't make sense to report an error, which would mean that
 something is wrong with the encoded data itself.  This value that it
 decodes to will give the program counter values it corresponds to, but
-will not include the function name or defining class, as @truffle/decoder
+will not include the function name or defining class, as @dune-network/decoder
 is not presently capable of that.  For now, full decoding of internal
 function pointers remains a debugger-only feature.  (But limited support for
-this via @truffle/decoder is planned for the future.)
+this via @dune-network/decoder is planned for the future.)
 
 (When using the debugger, an invalid internal function pointer will decode to an
-error.  However, when using @truffle/decoder, we have no way of discerning whether
+error.  However, when using @dune-network/decoder, we have no way of discerning whether
 the pointer is valid or not, so internal function pointers will always decode to
 a value, if an uninformative one.)
 

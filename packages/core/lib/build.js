@@ -1,11 +1,11 @@
 const mkdirp = require("mkdirp");
 const del = require("del");
-const Contracts = require("@truffle/workflow-compile");
+const Contracts = require("@dune-network/workflow-compile");
 const BuildError = require("./errors/builderror");
 const { spawn } = require("child_process");
 const spawnargs = require("spawn-args");
 const _ = require("lodash");
-const expect = require("@truffle/expect");
+const expect = require("@dune-network/expect");
 
 function CommandBuilder(command) {
   this.command = command;

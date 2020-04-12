@@ -36,11 +36,11 @@ const command = {
     ]
   },
   run: function(options, done) {
-    const Config = require("@truffle/config");
-    const Contracts = require("@truffle/workflow-compile");
+    const Config = require("@dune-network/config");
+    const Contracts = require("@dune-network/workflow-compile");
     const ConfigurationError = require("../errors/configurationerror");
-    const Require = require("@truffle/require");
-    const { Environment } = require("@truffle/environment");
+    const Require = require("@dune-network/require");
+    const { Environment } = require("@dune-network/environment");
     const path = require("path");
     const OS = require("os");
 

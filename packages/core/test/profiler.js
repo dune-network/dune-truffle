@@ -1,12 +1,12 @@
 var assert = require("chai").assert;
 var fs = require("fs-extra");
 var glob = require("glob");
-var Box = require("@truffle/box");
-var Profiler = require("@truffle/compile-solidity/profiler");
-var Resolver = require("@truffle/resolver");
-var Artifactor = require("@truffle/artifactor");
+var Box = require("@dune-network/box");
+var Profiler = require("@dune-network/compile-solidity/profiler");
+var Resolver = require("@dune-network/resolver");
+var Artifactor = require("@dune-network/artifactor");
 
-// TOOD: Move this to @truffle/compile-solidity!
+// TOOD: Move this to @dune-network/compile-solidity!
 
 describe("profiler", function() {
   var config;

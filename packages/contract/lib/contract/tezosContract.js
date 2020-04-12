@@ -46,7 +46,7 @@ const loadTezosContract = (instance, constructor, contract) => {
 
       // NOTE: current request functionality not supported in Tezos
       // (as of writing this comment).
-      // also currently useless in @truffle/contract
+      // also currently useless in @dune-network/contract
       /*
         fn.request = execute.request.call(
           constructor,

@@ -6,8 +6,8 @@ const resolve = require("path").resolve;
 const { callbackify, promisify } = require("util");
 const glob = promisify(require("glob"));
 const fs = require("fs");
-const expect = require("@truffle/expect");
-const Schema = require("@truffle/contract-schema");
+const expect = require("@dune-network/expect");
+const Schema = require("@dune-network/contract-schema");
 const web3Utils = require("web3-utils");
 
 const DEFAULT_ABI = [

@@ -1,10 +1,10 @@
-import * as Compiler from "@truffle/codec/compiler";
-import * as Ast from "@truffle/codec/ast";
-import * as AbiData from "@truffle/codec/abi-data/types";
-import * as Contexts from "@truffle/codec/contexts/types";
-import * as Pointer from "@truffle/codec/pointer";
-import { DecodingMode } from "@truffle/codec/types";
-import * as Format from "@truffle/codec/format";
+import * as Compiler from "@dune-network/codec/compiler";
+import * as Ast from "@dune-network/codec/ast";
+import * as AbiData from "@dune-network/codec/abi-data/types";
+import * as Contexts from "@dune-network/codec/contexts/types";
+import * as Pointer from "@dune-network/codec/pointer";
+import { DecodingMode } from "@dune-network/codec/types";
+import * as Format from "@dune-network/codec/format";
 
 //for passing to calldata/event/contract allocation functions
 export interface ContractAllocationInfo {

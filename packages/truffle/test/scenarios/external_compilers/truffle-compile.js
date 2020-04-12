@@ -1,6 +1,6 @@
 var MemoryLogger = require("../memorylogger");
 var CommandRunner = require("../commandrunner");
-var contract = require("@truffle/contract");
+var contract = require("@dune-network/contract");
 var fs = require("fs");
 var path = require("path");
 var assert = require("assert");

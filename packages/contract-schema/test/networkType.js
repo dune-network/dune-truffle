@@ -1,4 +1,4 @@
-const contract = require("@truffle/contract");
+const contract = require("@dune-network/contract");
 const Schema = require("../");
 const assert = require("assert");
 const MetaCoin = require("./MetaCoin.json");

@@ -4,12 +4,12 @@ const debug = debugModule("decoder:utils");
 import Web3 from "web3";
 import BN from "bn.js";
 
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 import * as Types from "./types";
 
 //sorry for the untyped import, but...
-const { shimBytecode } = require("@truffle/compile-solidity/legacy/shims");
+const { shimBytecode } = require("@dune-network/compile-solidity/legacy/shims");
 
 //NOTE: Definitely do not use this in real code!  For tests only!
 //for convenience: invokes the nativize method on all the given variables, and changes them to

@@ -1,5 +1,5 @@
-import * as Format from "@truffle/codec/format";
-import * as Pointer from "@truffle/codec/pointer";
+import * as Format from "@dune-network/codec/format";
+import * as Pointer from "@dune-network/codec/pointer";
 
 //memory works the same as abi except we don't bother keeping track of size
 //(it's always 1 word) or dynamicity (meaningless in memory)

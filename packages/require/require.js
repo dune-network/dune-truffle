@@ -3,9 +3,9 @@ const path = require("path");
 const Module = require("module");
 const vm = require("vm");
 const originalrequire = require("original-require");
-const expect = require("@truffle/expect");
-const { createInterfaceAdapter } = require("@truffle/interface-adapter");
-const Config = require("@truffle/config");
+const expect = require("@dune-network/expect");
+const { createInterfaceAdapter } = require("@dune-network/interface-adapter");
+const Config = require("@dune-network/config");
 
 // options.file: path to file to execute. Must be a module that exports a function.
 // options.args: arguments passed to the exported function within file. If a callback

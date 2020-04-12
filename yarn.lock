@@ -1139,22 +1139,22 @@
     bs58check "^2.1.2"
     buffer "^5.2.1"
 
-"@truffle/code-utils@^1.2.14":
+"@dune-network/code-utils@^1.2.14":
   version "1.2.14"
   resolved "https://registry.yarnpkg.com/@truffle/code-utils/-/code-utils-1.2.14.tgz#3828953eebb7a845a174a7927d0938b792e080f4"
   integrity sha512-TucOf6GqW/uE47rAnwT00fi0ltaeTPZ2NcQEwPVvf4X+0xeJ90hq3dr78JKzrxgPHOzyok2MYaB+qdkZWcrz/w==
   dependencies:
     source-map-support "^0.5.16"
 
-"@truffle/compile-solidity@^4.2.27":
+"@dune-network/compile-solidity@^4.2.27":
   version "4.2.27"
   resolved "https://registry.yarnpkg.com/@truffle/compile-solidity/-/compile-solidity-4.2.27.tgz#3d028f14075e15d9db274b4e146eb1546fea96f3"
   integrity sha512-Z9tuxQJY0Gh0HkyQ1vReACaMJzMe6Soop/KWPNM4zp4nVUEUiH6n77krCyYTSX1RpRqJNAZ+Iev4gwMwiBjyvg==
   dependencies:
-    "@truffle/config" "^1.2.17"
-    "@truffle/contract-sources" "^0.1.7"
-    "@truffle/error" "^0.0.8"
-    "@truffle/expect" "^0.0.13"
+    "@dune-network/config" "^1.2.17"
+    "@dune-network/contract-sources" "^0.1.7"
+    "@dune-network/error" "^0.0.8"
+    "@dune-network/expect" "^0.0.13"
     colors "^1.1.2"
     debug "^4.1.0"
     fs-extra "^8.1.0"
@@ -1166,14 +1166,14 @@
     semver "^5.6.0"
     solc "^0.6.0"
 
-"@truffle/config@^1.2.17":
+"@dune-network/config@^1.2.17":
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/@truffle/config/-/config-1.2.17.tgz#2dc75cd2022b583b7c182782507caddd3e159ce6"
   integrity sha512-MvKc3VKQ/yGD9/+lXDPJly3S9dIQq4mDa/2Nlr+owSbErg41blX9pUGljrluA1J3IiiPujrYUAG/EuNwObz28A==
   dependencies:
-    "@truffle/error" "^0.0.8"
-    "@truffle/events" "^0.0.5"
-    "@truffle/provider" "^0.2.9"
+    "@dune-network/error" "^0.0.8"
+    "@dune-network/events" "^0.0.5"
+    "@dune-network/provider" "^0.2.9"
     configstore "^4.0.0"
     find-up "^2.1.0"
     lodash.assignin "^4.2.0"
@@ -1182,7 +1182,7 @@
     original-require "1.0.1"
     source-map-support "^0.5.16"
 
-"@truffle/contract-sources@^0.1.7":
+"@dune-network/contract-sources@^0.1.7":
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/@truffle/contract-sources/-/contract-sources-0.1.7.tgz#11d7543b61141def64c8752eb49759ff5aee7580"
   integrity sha512-scv54DrRsgyRfFt+XntMNJDDpyI7d4rhoR5Ab6mlCaq9rkuYDjv2ylVQWOCjPjsOOEQ5EGYPgs22ZkS10oi70A==
@@ -1190,12 +1190,12 @@
     debug "^4.1.0"
     glob "^7.1.2"
 
-"@truffle/error@^0.0.8":
+"@dune-network/error@^0.0.8":
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/@truffle/error/-/error-0.0.8.tgz#dc94ca36393403449d4b7461bf9452c241e53ec1"
   integrity sha512-x55rtRuNfRO1azmZ30iR0pf0OJ6flQqbax1hJz+Avk1K5fdmOv5cr22s9qFnwTWnS6Bw0jvJEoR0ITsM7cPKtQ==
 
-"@truffle/events@^0.0.5":
+"@dune-network/events@^0.0.5":
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/@truffle/events/-/events-0.0.5.tgz#ee69d4603b2befc54060b02e111f56405d0f10ac"
   integrity sha512-yQ7vR2IQAswlEOO5onLOP71yfjbmYw0QPa8lrVzqfYZ5WrSI2HSbhNNVvy9boC73kcFkm7Kiq/HYU+UM1l4bNg==
@@ -1203,12 +1203,12 @@
     emittery "^0.4.1"
     ora "^3.4.0"
 
-"@truffle/expect@^0.0.13":
+"@dune-network/expect@^0.0.13":
   version "0.0.13"
   resolved "https://registry.yarnpkg.com/@truffle/expect/-/expect-0.0.13.tgz#c8e23edc1a1c3b13f768611e6199113026cf8bf2"
   integrity sha512-iLRALoFphCCA2ygDjyG+633dCMp81i09+V/oMDkdvDdYDF6KHjSt3Ov9eZMDnzl5PVBvmf2221U4qXSFB8V4fg==
 
-"@truffle/interface-adapter@^0.4.6":
+"@dune-network/interface-adapter@^0.4.6":
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/@truffle/interface-adapter/-/interface-adapter-0.4.6.tgz#d904e2ae6e03712f310eb4da858a1fe07fa27d11"
   integrity sha512-FZAUb7tx/7VbxpAbo70+K2v22j1O7y4BwhWypRwYpf1YbE2C1OCo/L8zInaW5LfzRd2BEsfb2GjUgbK9VaFrDA==
@@ -1218,13 +1218,13 @@
     source-map-support "^0.5.16"
     web3 "1.2.1"
 
-"@truffle/provider@^0.2.9":
+"@dune-network/provider@^0.2.9":
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/@truffle/provider/-/provider-0.2.9.tgz#689941899d04fef50aad81ed6c74f89cb76482b3"
   integrity sha512-C83cXOjhpvzEhQJxd0hfjX9jW+IMS7P+vLlVuhi1SMK5wBQNvZIb8i6VPnhNBMJV9BHAQx2NlgDcWIFAVVf5Rw==
   dependencies:
-    "@truffle/error" "^0.0.8"
-    "@truffle/interface-adapter" "^0.4.6"
+    "@dune-network/error" "^0.0.8"
+    "@dune-network/interface-adapter" "^0.4.6"
     web3 "1.2.1"
 
 "@trufflesuite/chromafi@^2.1.2":

@@ -80,8 +80,8 @@ const command = {
     ]
   },
   run: function(options, done) {
-    const Config = require("@truffle/config");
-    const { Environment, Develop } = require("@truffle/environment");
+    const Config = require("@dune-network/config");
+    const { Environment, Develop } = require("@dune-network/environment");
     const {
       copyArtifactsToTempDir,
       determineTestFilesToRun,

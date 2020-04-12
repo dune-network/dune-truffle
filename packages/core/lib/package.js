@@ -1,10 +1,10 @@
-const expect = require("@truffle/expect");
-const TruffleError = require("@truffle/error");
+const expect = require("@dune-network/expect");
+const TruffleError = require("@dune-network/error");
 const Networks = require("./networks");
 const EthPM = require("ethpm");
 const EthPMRegistry = require("ethpm-registry");
 const Web3 = require("web3");
-const { createInterfaceAdapter } = require("@truffle/interface-adapter");
+const { createInterfaceAdapter } = require("@dune-network/interface-adapter");
 const async = require("async");
 const path = require("path");
 const fs = require("fs");

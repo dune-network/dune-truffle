@@ -1,4 +1,4 @@
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 import stringify from "json-stable-stringify";
 
 /** AST node types that are skipped by stepNext() to filter out some noise */

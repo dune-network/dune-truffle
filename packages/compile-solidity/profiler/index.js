@@ -3,8 +3,8 @@
 
 const path = require("path");
 const CompilerSupplier = require("../compilerSupplier");
-const expect = require("@truffle/expect");
-const findContracts = require("@truffle/contract-sources");
+const expect = require("@dune-network/expect");
+const findContracts = require("@dune-network/contract-sources");
 const semver = require("semver");
 const debug = require("debug")("compile:profiler");
 const { readAndParseArtifactFiles } = require("./readAndParseArtifactFiles");

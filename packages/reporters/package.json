@@ -1,9 +1,9 @@
 {
-  "name": "@truffle/reporters",
+  "name": "@dune-network/reporters",
   "description": "Reporters for Truffle modules",
   "license": "MIT",
   "author": "",
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/reporters",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/reporters",
   "version": "1.1.0-tezos.1",
   "main": "index.js",
   "scripts": {},

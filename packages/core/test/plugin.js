@@ -1,6 +1,6 @@
 const assert = require("assert");
 const pluginLoader = require("../lib/commands/run/plugin");
-const TruffleError = require("@truffle/error");
+const TruffleError = require("@dune-network/error");
 const originalRequire = require("original-require");
 const path = require("path");
 
@@ -105,12 +105,12 @@ describe("plugin loader", () => {
     it("returns array of locally or globally installed options.plugins", () => {
       assert(
         pluginLoader.checkPluginModules({
-          plugins: ["@truffle/box"],
+          plugins: ["@dune-network/box"],
           working_directory: process.cwd()
         })
       );
       let pluginArray = pluginLoader.checkPluginModules({
-        plugins: ["@truffle/box"],
+        plugins: ["@dune-network/box"],
         working_directory: process.cwd()
       });
       assert(pluginArray);
@@ -118,12 +118,12 @@ describe("plugin loader", () => {
 
       assert(
         pluginLoader.checkPluginModules({
-          plugins: ["@truffle/box", "@truffle/config"],
+          plugins: ["@dune-network/box", "@dune-network/config"],
           working_directory: process.cwd()
         })
       );
       pluginArray = pluginLoader.checkPluginModules({
-        plugins: ["@truffle/box", "@truffle/config"],
+        plugins: ["@dune-network/box", "@dune-network/config"],
         working_directory: process.cwd()
       });
       assert(pluginArray);
@@ -135,14 +135,17 @@ describe("plugin loader", () => {
     it("throws when plugins are installed without a truffle-plugin.json configuration file", () => {
       assert.throws(
         () => {
-          pluginLoader.loadPluginModules(["@truffle/box"]);
+          pluginLoader.loadPluginModules(["@dune-network/box"]);
         },
         TruffleError,
         "TruffleError not thrown!"
       );
       assert.throws(
         () => {
-          pluginLoader.loadPluginModules(["@truffle/box", "@truffle/config"]);
+          pluginLoader.loadPluginModules([
+            "@dune-network/box",
+            "@dune-network/config"
+          ]);
         },
         TruffleError,
         "TruffleError not thrown!"
@@ -243,14 +246,17 @@ describe("plugin loader", () => {
       it("throws when plugins are installed without a truffle-plugin.json configuration file", () => {
         assert.throws(
           () => {
-            pluginLoader.loadPluginModules(["@truffle/box"]);
+            pluginLoader.loadPluginModules(["@dune-network/box"]);
           },
           TruffleError,
           "TruffleError not thrown!"
         );
         assert.throws(
           () => {
-            pluginLoader.loadPluginModules(["@truffle/box", "@truffle/config"]);
+            pluginLoader.loadPluginModules([
+              "@dune-network/box",
+              "@dune-network/config"
+            ]);
           },
           TruffleError,
           "TruffleError not thrown!"

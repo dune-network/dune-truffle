@@ -1,15 +1,15 @@
 import debugModule from "debug";
 const debug = debugModule("codec:ast:decode");
 
-import read from "@truffle/codec/read";
-import * as Conversion from "@truffle/codec/conversion";
-import * as Format from "@truffle/codec/format";
-import * as Pointer from "@truffle/codec/pointer";
-import * as Basic from "@truffle/codec/basic";
-import * as Bytes from "@truffle/codec/bytes";
-import { DecoderRequest } from "@truffle/codec/types";
-import * as Evm from "@truffle/codec/evm";
-import { DecodingError } from "@truffle/codec/errors";
+import read from "@dune-network/codec/read";
+import * as Conversion from "@dune-network/codec/conversion";
+import * as Format from "@dune-network/codec/format";
+import * as Pointer from "@dune-network/codec/pointer";
+import * as Basic from "@dune-network/codec/basic";
+import * as Bytes from "@dune-network/codec/bytes";
+import { DecoderRequest } from "@dune-network/codec/types";
+import * as Evm from "@dune-network/codec/evm";
+import { DecodingError } from "@dune-network/codec/errors";
 
 export function* decodeConstant(
   dataType: Format.Types.Type,

@@ -1,6 +1,6 @@
 const tmp = require("tmp");
 const fse = require("fs-extra");
-const Config = require("@truffle/config");
+const Config = require("@dune-network/config");
 const path = require("path");
 
 module.exports = {

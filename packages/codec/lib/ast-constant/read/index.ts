@@ -1,12 +1,12 @@
 import debugModule from "debug";
 const debug = debugModule("codec:ast:read");
 
-import * as Conversion from "@truffle/codec/conversion";
-import * as Evm from "@truffle/codec/evm";
-import * as Ast from "@truffle/codec/ast";
-import * as Pointer from "@truffle/codec/pointer";
+import * as Conversion from "@dune-network/codec/conversion";
+import * as Evm from "@dune-network/codec/evm";
+import * as Ast from "@dune-network/codec/ast";
+import * as Pointer from "@dune-network/codec/pointer";
 import BN from "bn.js";
-import { DecodingError } from "@truffle/codec/errors";
+import { DecodingError } from "@dune-network/codec/errors";
 
 export function readDefinition(
   pointer: Pointer.ConstantDefinitionPointer

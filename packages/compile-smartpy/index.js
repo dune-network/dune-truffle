@@ -5,8 +5,8 @@ const { promisify } = require("util");
 const promisifiedMkdirp = promisify(require("mkdirp"));
 const colors = require("colors");
 const minimatch = require("minimatch");
-const find_contracts = require("@truffle/contract-sources");
-const Profiler = require("@truffle/compile-solidity/profiler");
+const find_contracts = require("@dune-network/contract-sources");
+const Profiler = require("@dune-network/compile-solidity/profiler");
 
 const compiler = {
   name: "smartpy",

@@ -1,4 +1,4 @@
-const contract = require("@truffle/contract");
+const contract = require("@dune-network/contract");
 
 const Schema = require("../index.js");
 const assert = require("assert");

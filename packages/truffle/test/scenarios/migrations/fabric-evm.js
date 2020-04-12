@@ -5,7 +5,7 @@ const assert = require("assert");
 const Reporter = require("../reporter");
 const sandbox = require("../sandbox");
 const Web3 = require("web3");
-const { createInterfaceAdapter } = require("@truffle/interface-adapter");
+const { createInterfaceAdapter } = require("@dune-network/interface-adapter");
 
 describe("migrate with [ @fabric-evm ] interface", () => {
   if (!process.env.FABRICEVM) return;

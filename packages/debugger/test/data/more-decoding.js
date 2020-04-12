@@ -13,7 +13,7 @@ import solidity from "lib/solidity/selectors";
 import data from "lib/data/selectors";
 import evm from "lib/evm/selectors";
 
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 const __CONTAINERS = `
 pragma solidity ^0.6.1;

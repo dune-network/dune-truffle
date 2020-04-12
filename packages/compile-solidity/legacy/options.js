@@ -1,4 +1,4 @@
-const expect = require("@truffle/expect");
+const expect = require("@dune-network/expect");
 
 /**
  * Handle options compatibility

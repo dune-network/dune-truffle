@@ -5,11 +5,11 @@
 | JSON Schema | [contract-object.spec.json](spec/contract-object.spec.json) |
 
 
-[@truffle/contract](https://github.com/trufflesuite/truffle/tree/develop/packages/contract) uses a
+[@dune-network/contract](https://github.com/dune-network/truffle/tree/develop/packages/contract) uses a
 formally specified<sup>[1](#footnote-1)</sup> JSON object format to represent
 supported smart contracts. This representation is intended
 to facilitate the use of general purpose smart contract abstractions
-(such as @truffle/contract) by capturing relevant smart contract information in a
+(such as @dune-network/contract) by capturing relevant smart contract information in a
 persistent and portable manner.
 
 Objects following this schema represent individual smart contracts as defined

@@ -2,10 +2,10 @@
   "name": "truffle",
   "description": "Truffle - Simple development framework for Ethereum",
   "author": "consensys.net",
-  "homepage": "https://github.com/trufflesuite/truffle/",
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/truffle",
+  "homepage": "https://github.com/dune-network/truffle/",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/truffle",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
   "version": "5.3.0-tezos.1",
   "main": "./build/library.bundled.js",
@@ -31,11 +31,11 @@
     "original-require": "1.0.1"
   },
   "devDependencies": {
-    "@truffle/box": "^1.1.0-tezos.1",
-    "@truffle/contract": "^4.3.0-tezos.1",
-    "@truffle/core": "^5.3.0-tezos.1",
-    "@truffle/debugger": "^7.0.5-tezos.1",
-    "@truffle/interface-adapter": "^0.5.0-tezos.4",
+    "@dune-network/box": "^1.1.0-tezos.1",
+    "@dune-network/contract": "^4.3.0-tezos.1",
+    "@dune-network/core": "^5.3.0-tezos.1",
+    "@dune-network/debugger": "^7.0.5-tezos.1",
+    "@dune-network/interface-adapter": "^0.5.0-tezos.4",
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
     "eslint": "^5.7.0",

@@ -6,7 +6,7 @@ import { assert } from "chai";
 import Ganache from "ganache-core";
 
 import { prepareContracts } from "./helpers";
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 import Debugger from "lib/debugger";
 
 import trace from "lib/trace/selectors";

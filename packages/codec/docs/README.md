@@ -1,8 +1,8 @@
 # Truffle Decoding and Encoding
 
 This documentation provides information and complete interface listings for
-two packages: **@truffle/decoder**, a high-level library for decoding, and
-**@truffle/codec**, a low-level package for encoding, decoding, and data
+two packages: **@dune-network/decoder**, a high-level library for decoding, and
+**@dune-network/codec**, a low-level package for encoding, decoding, and data
 representation.
 
 
@@ -10,7 +10,7 @@ representation.
 
 ### High-level interface (for common use)
 
-[[@truffle/decoder]] provides a high-level interface for **decoding
+[[@dune-network/decoder]] provides a high-level interface for **decoding
 transactions, events, and state variables for Ethereum smart contracts.**
 This package accepts Truffle's
 [contract abstractions](https://www.trufflesuite.com/docs/truffle/reference/contract-abstractions)
@@ -19,7 +19,7 @@ blockchain to retrieve raw values for decoding.
 
 ### Low-level interface (for special-case purposes)
 
-[[@truffle/codec]] provides the underlying low-level interfaces for performing
+[[@dune-network/codec]] provides the underlying low-level interfaces for performing
 this decoding, as well as interfaces for encoding these values and for
 decoding of local Solidity variables and other
 data observable in a debugging trace.

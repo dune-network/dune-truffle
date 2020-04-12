@@ -1,14 +1,14 @@
 import debugModule from "debug";
 const debug = debugModule("codec:basic:decode");
 
-import read from "@truffle/codec/read";
-import * as Conversion from "@truffle/codec/conversion";
-import * as Format from "@truffle/codec/format";
-import * as Contexts from "@truffle/codec/contexts";
-import * as Pointer from "@truffle/codec/pointer";
-import { DecoderRequest, DecoderOptions } from "@truffle/codec/types";
-import * as Evm from "@truffle/codec/evm";
-import { DecodingError, StopDecodingError } from "@truffle/codec/errors";
+import read from "@dune-network/codec/read";
+import * as Conversion from "@dune-network/codec/conversion";
+import * as Format from "@dune-network/codec/format";
+import * as Contexts from "@dune-network/codec/contexts";
+import * as Pointer from "@dune-network/codec/pointer";
+import { DecoderRequest, DecoderOptions } from "@dune-network/codec/types";
+import * as Evm from "@dune-network/codec/evm";
+import { DecodingError, StopDecodingError } from "@dune-network/codec/errors";
 
 export function* decodeBasic(
   dataType: Format.Types.Type,

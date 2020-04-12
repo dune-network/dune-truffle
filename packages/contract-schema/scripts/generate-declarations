@@ -9,6 +9,6 @@ json2ts -i contract-object.spec.json -o ./index.d.ts \
  * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
  * and run \`yarn prepare\` inside your local packages/contract-schema
  *
- * @module @truffle/contract-schema/spec
+ * @module @dune-network/contract-schema/spec
  */ /** */
  "

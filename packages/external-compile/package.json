@@ -1,12 +1,12 @@
 {
-  "name": "@truffle/external-compile",
+  "name": "@dune-network/external-compile",
   "description": "Wrapper to compile Truffle contracts with arbitrary shell command",
   "license": "MIT",
   "author": "g. nicholas d'andrea <gnidan@users.noreply.github.com>",
   "homepage": "https://github.com/trufflesuite/truffle#readme",
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/external-compile",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/external-compile",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
   "version": "1.1.0-tezos.1",
   "main": "index.js",
@@ -14,8 +14,8 @@
     "test": "mocha"
   },
   "dependencies": {
-    "@truffle/contract-schema": "^3.2.0-tezos.0",
-    "@truffle/expect": "^0.1.0-tezos.0",
+    "@dune-network/contract-schema": "^3.2.0-tezos.0",
+    "@dune-network/expect": "^0.1.0-tezos.0",
     "debug": "^4.1.0",
     "glob": "^7.1.2",
     "web3-utils": "1.2.1"

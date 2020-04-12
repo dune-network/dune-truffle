@@ -1,4 +1,4 @@
-const Config = require("@truffle/config");
+const Config = require("@dune-network/config");
 const { assert } = require("chai");
 const { run } = require("../run");
 let rawSources, options;

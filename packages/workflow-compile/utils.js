@@ -1,7 +1,7 @@
-const Config = require("@truffle/config");
-const expect = require("@truffle/expect");
-const Resolver = require("@truffle/resolver");
-const Artifactor = require("@truffle/artifactor");
+const Config = require("@dune-network/config");
+const expect = require("@dune-network/expect");
+const Resolver = require("@dune-network/resolver");
+const Artifactor = require("@dune-network/artifactor");
 
 function prepareConfig(options) {
   expect.options(options, ["contracts_build_directory"]);

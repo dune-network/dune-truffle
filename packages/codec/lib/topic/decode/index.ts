@@ -1,13 +1,13 @@
 import debugModule from "debug";
 const debug = debugModule("codec:topic:decode");
 
-import read from "@truffle/codec/read";
-import * as Basic from "@truffle/codec/basic";
-import * as Format from "@truffle/codec/format";
-import * as Conversion from "@truffle/codec/conversion";
-import * as Pointer from "@truffle/codec/pointer";
-import { DecoderRequest, DecoderOptions } from "@truffle/codec/types";
-import * as Evm from "@truffle/codec/evm";
+import read from "@dune-network/codec/read";
+import * as Basic from "@dune-network/codec/basic";
+import * as Format from "@dune-network/codec/format";
+import * as Conversion from "@dune-network/codec/conversion";
+import * as Pointer from "@dune-network/codec/pointer";
+import { DecoderRequest, DecoderOptions } from "@dune-network/codec/types";
+import * as Evm from "@dune-network/codec/evm";
 
 export function* decodeTopic(
   dataType: Format.Types.Type,

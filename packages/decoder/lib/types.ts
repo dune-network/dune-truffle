@@ -1,6 +1,6 @@
 import BN from "bn.js";
-import { ContractObject as Artifact } from "@truffle/contract-schema/spec";
-import TruffleConfig from "@truffle/config";
+import { ContractObject as Artifact } from "@dune-network/contract-schema/spec";
+import TruffleConfig from "@dune-network/config";
 import {
   Format,
   Ast,
@@ -8,8 +8,8 @@ import {
   Contexts,
   CalldataDecoding,
   LogDecoding
-} from "@truffle/codec";
-import { InterfaceAdapter } from "@truffle/interface-adapter";
+} from "@dune-network/codec";
+import { InterfaceAdapter } from "@dune-network/interface-adapter";
 
 /**
  * This type represents information about a Truffle project that can be used to

@@ -4,7 +4,7 @@ var path = require("path");
 var debug = require("debug")("debug-utils");
 var BN = require("bn.js");
 var util = require("util");
-var Codec = require("@truffle/codec");
+var Codec = require("@dune-network/codec");
 
 var chromafi = require("@trufflesuite/chromafi");
 var hljsDefineSolidity = require("highlightjs-solidity");

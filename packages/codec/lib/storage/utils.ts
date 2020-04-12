@@ -1,8 +1,8 @@
 import debugModule from "debug";
 const debug = debugModule("codec:storage:utils");
 import BN from "bn.js";
-import * as Evm from "@truffle/codec/evm";
-import * as MappingKey from "@truffle/codec/mapping-key";
+import * as Evm from "@dune-network/codec/evm";
+import * as MappingKey from "@dune-network/codec/mapping-key";
 
 import { StorageLength, Slot } from "./types";
 

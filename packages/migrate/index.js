@@ -1,14 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
-const expect = require("@truffle/expect");
-const Config = require("@truffle/config");
-const Reporter = require("@truffle/reporters");
+const expect = require("@dune-network/expect");
+const Config = require("@dune-network/config");
+const Reporter = require("@dune-network/reporters");
 const Migration = require("./migration.js");
 const Emittery = require("emittery");
 
 /**
- *  This API is consumed by `@truffle/core` at the `migrate` and `test` commands via
+ *  This API is consumed by `@dune-network/core` at the `migrate` and `test` commands via
  *  the `.runMigrations` method.
  */
 const Migrate = {

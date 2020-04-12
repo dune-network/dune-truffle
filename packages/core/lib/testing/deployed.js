@@ -1,6 +1,6 @@
 const web3Utils = require("web3-utils");
 const semver = require("semver");
-const Native = require("@truffle/compile-solidity/compilerSupplier/loadingStrategies/Native");
+const Native = require("@dune-network/compile-solidity/compilerSupplier/loadingStrategies/Native");
 
 var Deployed = {
   makeSolidityDeployedAddressesLibrary: function(

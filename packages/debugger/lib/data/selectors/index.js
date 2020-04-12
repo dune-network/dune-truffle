@@ -10,7 +10,7 @@ import { stableKeccak256 } from "lib/helpers";
 import evm from "lib/evm/selectors";
 import solidity from "lib/solidity/selectors";
 
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 /**
  * @private

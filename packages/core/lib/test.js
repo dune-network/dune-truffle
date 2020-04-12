@@ -1,19 +1,19 @@
 const colors = require("colors");
 const chai = require("chai");
 const path = require("path");
-const { createInterfaceAdapter } = require("@truffle/interface-adapter");
-const Config = require("@truffle/config");
-const Contracts = require("@truffle/workflow-compile/new");
-const Resolver = require("@truffle/resolver");
+const { createInterfaceAdapter } = require("@dune-network/interface-adapter");
+const Config = require("@dune-network/config");
+const Contracts = require("@dune-network/workflow-compile/new");
+const Resolver = require("@dune-network/resolver");
 const TestRunner = require("./testing/testrunner");
 const TestResolver = require("./testing/testresolver");
 const TestSource = require("./testing/testsource");
 const SolidityTest = require("./testing/soliditytest");
-const expect = require("@truffle/expect");
-const Migrate = require("@truffle/migrate");
-const Profiler = require("@truffle/compile-solidity/profiler");
+const expect = require("@dune-network/expect");
+const Migrate = require("@dune-network/migrate");
+const Profiler = require("@dune-network/compile-solidity/profiler");
 const originalrequire = require("original-require");
-const Codec = require("@truffle/codec");
+const Codec = require("@dune-network/codec");
 const debug = require("debug")("lib:test");
 
 let Mocha; // Late init with "mocha" or "mocha-parallel-tests"

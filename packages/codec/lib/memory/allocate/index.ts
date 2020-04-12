@@ -6,8 +6,8 @@ import {
   MemoryAllocation,
   MemoryMemberAllocation
 } from "./types";
-import * as Evm from "@truffle/codec/evm";
-import * as Format from "@truffle/codec/format";
+import * as Evm from "@dune-network/codec/evm";
+import * as Format from "@dune-network/codec/format";
 
 export { MemoryAllocations, MemoryAllocation, MemoryMemberAllocation };
 

@@ -2,7 +2,7 @@ import { assert } from "chai";
 
 import BN from "bn.js";
 
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 describe("Utils", function() {
   describe("typeClass()", function() {

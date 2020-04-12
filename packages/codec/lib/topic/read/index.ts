@@ -1,5 +1,5 @@
-import * as Evm from "@truffle/codec/evm";
-import * as Pointer from "@truffle/codec/pointer";
+import * as Evm from "@dune-network/codec/evm";
+import * as Pointer from "@dune-network/codec/pointer";
 
 export function readTopic(
   pointer: Pointer.EventTopicPointer,

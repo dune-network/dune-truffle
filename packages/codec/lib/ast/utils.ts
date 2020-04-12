@@ -1,8 +1,8 @@
 import debugModule from "debug";
 const debug = debugModule("codec:ast:utils");
 
-import * as Common from "@truffle/codec/common";
-import * as AbiData from "@truffle/codec/abi-data/types";
+import * as Common from "@dune-network/codec/common";
+import * as AbiData from "@dune-network/codec/abi-data/types";
 
 import { AstNode, AstNodes, Scopes } from "./types";
 import BN from "bn.js";

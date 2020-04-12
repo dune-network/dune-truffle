@@ -1,16 +1,16 @@
-# @truffle/expect
+# @dune-network/expect
 Simple module for ensuring expected parameters exist
 
 ### install
 
 ```
-$ npm install @truffle/expect
+$ npm install @dune-network/expect
 ```
 
 ### Usage
 
 ```javascript
-const expect = require("@truffle/expect");
+const expect = require("@dune-network/expect");
 
 // the object you're testing
 const options = {

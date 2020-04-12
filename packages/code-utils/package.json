@@ -1,9 +1,9 @@
 {
-  "name": "@truffle/code-utils",
+  "name": "@dune-network/code-utils",
   "description": "Utilities for parsing and managing EVM-compatible bytecode",
   "license": "MIT",
   "author": "",
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/code-utils",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/code-utils",
   "version": "1.3.0-tezos.1",
   "main": "dist/index.js",
   "scripts": {

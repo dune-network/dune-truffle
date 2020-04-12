@@ -18,10 +18,10 @@ var command = {
     ]
   },
   run: function(options, done) {
-    var Config = require("@truffle/config");
-    var TruffleError = require("@truffle/error");
-    var Contracts = require("@truffle/workflow-compile");
-    var CodeUtils = require("@truffle/code-utils");
+    var Config = require("@dune-network/config");
+    var TruffleError = require("@dune-network/error");
+    var Contracts = require("@dune-network/workflow-compile");
+    var CodeUtils = require("@dune-network/code-utils");
 
     if (options._.length === 0) {
       return done(new TruffleError("Please specify a contract name."));

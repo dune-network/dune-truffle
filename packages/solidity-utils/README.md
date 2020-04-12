@@ -1,4 +1,4 @@
-# @truffle/solidity-utils
+# @dune-network/solidity-utils
 Utilities for solidity contracts
 
 # API

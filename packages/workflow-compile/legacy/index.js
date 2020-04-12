@@ -1,11 +1,11 @@
 const debug = require("debug")("workflow-compile");
 const mkdirp = require("mkdirp");
 const { promisify } = require("util");
-const externalCompile = require("@truffle/external-compile");
-const solcCompile = require("@truffle/compile-solidity/legacy");
-const vyperCompile = require("@truffle/compile-vyper");
-const ligoCompile = require("@truffle/compile-ligo");
-const smartpyCompile = require("@truffle/compile-smartpy");
+const externalCompile = require("@dune-network/external-compile");
+const solcCompile = require("@dune-network/compile-solidity/legacy");
+const vyperCompile = require("@dune-network/compile-vyper");
+const ligoCompile = require("@dune-network/compile-ligo");
+const smartpyCompile = require("@dune-network/compile-smartpy");
 const { prepareConfig, multiPromisify } = require("../utils");
 const {
   reportCompilationStarted,

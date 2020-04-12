@@ -1,6 +1,6 @@
 const debug = require("debug")("solidity-utils");
-const CodeUtils = require("@truffle/code-utils");
-const Codec = require("@truffle/codec");
+const CodeUtils = require("@dune-network/code-utils");
+const Codec = require("@dune-network/codec");
 const jsonpointer = require("json-pointer");
 //NOTE: for some reason using the default export isn't working??
 //so we're going to do this the "advanced usage" way...

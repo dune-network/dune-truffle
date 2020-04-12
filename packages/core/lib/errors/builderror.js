@@ -1,5 +1,5 @@
 const colors = require("colors");
-const TruffleError = require("@truffle/error");
+const TruffleError = require("@dune-network/error");
 const inherits = require("util").inherits;
 
 inherits(BuildError, TruffleError);

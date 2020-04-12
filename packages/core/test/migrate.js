@@ -1,14 +1,14 @@
 var assert = require("chai").assert;
-var Box = require("@truffle/box");
-var Migrate = require("@truffle/migrate");
-var Contracts = require("@truffle/workflow-compile");
+var Box = require("@dune-network/box");
+var Migrate = require("@dune-network/migrate");
+var Contracts = require("@dune-network/workflow-compile");
 var Networks = require("../lib/networks");
 var path = require("path");
 var fs = require("fs-extra");
 var glob = require("glob");
 var Ganache = require("ganache-core");
-var Resolver = require("@truffle/resolver");
-var Artifactor = require("@truffle/artifactor");
+var Resolver = require("@dune-network/resolver");
+var Artifactor = require("@dune-network/artifactor");
 var Web3 = require("web3");
 
 describe("migrate", function() {

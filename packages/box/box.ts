@@ -2,7 +2,7 @@ import "source-map-support/register";
 import utils from "./lib/utils";
 import tmp from "tmp";
 import path from "path";
-import Config from "@truffle/config";
+import Config from "@dune-network/config";
 import fse from "fs-extra";
 import inquirer from "inquirer";
 import { sandboxOptions, unboxOptions } from "typings";

@@ -2,7 +2,7 @@ import debugModule from "debug";
 const debug = debugModule("test:data:codex");
 
 import { assert } from "chai";
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 import Ganache from "ganache-core";
 

@@ -1,9 +1,9 @@
 import debugModule from "debug";
 const debug = debugModule("codec:format:utils:exception");
 
-import * as Format from "@truffle/codec/format/common";
-import * as Ast from "@truffle/codec/ast";
-import * as Storage from "@truffle/codec/storage/types";
+import * as Format from "@dune-network/codec/format/common";
+import * as Ast from "@dune-network/codec/ast";
+import * as Storage from "@dune-network/codec/storage/types";
 
 //this function gives an error message
 //for those errors that are meant to possibly

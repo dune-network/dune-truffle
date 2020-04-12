@@ -6,7 +6,7 @@ import BN from "bn.js";
 
 import trace from "lib/trace/selectors";
 
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 import {
   keccak256,
   isCallMnemonic,

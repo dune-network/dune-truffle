@@ -1,12 +1,12 @@
 import debugModule from "debug";
 const debug = debugModule("codec:storage:allocate");
 
-import { DecodingError } from "@truffle/codec/errors";
-import * as Compiler from "@truffle/codec/compiler";
-import * as Common from "@truffle/codec/common";
-import * as Storage from "@truffle/codec/storage/types";
-import * as Utils from "@truffle/codec/storage/utils";
-import * as Ast from "@truffle/codec/ast";
+import { DecodingError } from "@dune-network/codec/errors";
+import * as Compiler from "@dune-network/codec/compiler";
+import * as Common from "@dune-network/codec/common";
+import * as Storage from "@dune-network/codec/storage/types";
+import * as Utils from "@dune-network/codec/storage/utils";
+import * as Ast from "@dune-network/codec/ast";
 import {
   StorageAllocation,
   StorageAllocations,
@@ -15,9 +15,9 @@ import {
   StateAllocations,
   StateVariableAllocation
 } from "./types";
-import { ContractAllocationInfo } from "@truffle/codec/abi-data/allocate";
-import * as Evm from "@truffle/codec/evm";
-import * as Format from "@truffle/codec/format";
+import { ContractAllocationInfo } from "@dune-network/codec/abi-data/allocate";
+import * as Evm from "@dune-network/codec/evm";
+import * as Format from "@dune-network/codec/format";
 import BN from "bn.js";
 import partition from "lodash.partition";
 

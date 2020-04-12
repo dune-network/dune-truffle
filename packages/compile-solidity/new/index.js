@@ -1,9 +1,9 @@
 const debug = require("debug")("compile:new"); // eslint-disable-line no-unused-vars
 const path = require("path");
 const { promisify } = require("util");
-const expect = require("@truffle/expect");
-const findContracts = require("@truffle/contract-sources");
-const Config = require("@truffle/config");
+const expect = require("@dune-network/expect");
+const findContracts = require("@dune-network/contract-sources");
+const Config = require("@dune-network/config");
 const Profiler = require("../profiler");
 const CompilerSupplier = require("../compilerSupplier");
 const { run } = require("../run");

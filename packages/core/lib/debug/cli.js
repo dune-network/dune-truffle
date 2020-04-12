@@ -3,9 +3,9 @@ const debug = debugModule("lib:debug:cli");
 
 const ora = require("ora");
 
-const Debugger = require("@truffle/debugger");
-const DebugUtils = require("@truffle/debug-utils");
-const Codec = require("@truffle/codec");
+const Debugger = require("@dune-network/debugger");
+const DebugUtils = require("@dune-network/debug-utils");
+const Codec = require("@dune-network/codec");
 
 const { DebugInterpreter } = require("./interpreter");
 const { DebugCompiler } = require("./compiler");
@@ -25,7 +25,7 @@ class CLIDebugger {
     const compilations =
       this.compilations || (await this.getCompilations(this.config));
 
-    // invoke @truffle/debugger
+    // invoke @dune-network/debugger
     const session = await this.startDebugger(compilations, txHash);
 
     // initialize prompt/breakpoints/ui logic

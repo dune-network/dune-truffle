@@ -1,10 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 const OS = require("os");
-const BlockchainUtils = require("@truffle/blockchain-utils");
-const Provider = require("@truffle/provider");
+const BlockchainUtils = require("@dune-network/blockchain-utils");
+const Provider = require("@dune-network/provider");
 const async = require("async");
-const { createInterfaceAdapter } = require("@truffle/interface-adapter");
+const { createInterfaceAdapter } = require("@dune-network/interface-adapter");
 
 const tezosNetworkChainIdMapping = {
   babylonnet: "NetXUdfLh6Gm88t",

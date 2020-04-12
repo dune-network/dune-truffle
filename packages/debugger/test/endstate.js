@@ -11,7 +11,7 @@ import Debugger from "lib/debugger";
 import evm from "lib/evm/selectors";
 import data from "lib/data/selectors";
 
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 const __FAILURE = `
 pragma solidity ^0.6.1;

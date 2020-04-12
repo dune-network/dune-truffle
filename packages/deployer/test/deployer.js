@@ -1,8 +1,8 @@
 const ganache = require("ganache-core");
 const Web3 = require("web3");
-const { createInterfaceAdapter } = require("@truffle/interface-adapter");
+const { createInterfaceAdapter } = require("@dune-network/interface-adapter");
 const assert = require("assert");
-const Reporter = require("@truffle/reporters");
+const Reporter = require("@dune-network/reporters");
 const EventEmitter = require("events");
 
 const Deployer = require("../index");
@@ -195,7 +195,7 @@ describe("Deployer (sync)", function() {
     assert(output.includes("UsesLibrary"));
   });
 
-  // There's a chain like this in the @truffle/core solidity-tests
+  // There's a chain like this in the @dune-network/core solidity-tests
   it("deployer.deploy().then()", async function() {
     const migrate = function() {
       deployer

@@ -1,1 +1,1 @@
-declare module "@truffle/error";
+declare module "@dune-network/error";

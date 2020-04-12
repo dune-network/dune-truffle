@@ -85,7 +85,7 @@ This usage example is for a project with two contracts, `Contract1` and
 `Contract2`.
 
 ```typescript
-import { forProject } from "@truffle/decoder";
+import { forProject } from "@dune-network/decoder";
 const contract1 = artifacts.require("Contract1");
 const contract2 = artifacts.require("Contract2");
 const provider = web3.currentProvider;
@@ -104,7 +104,7 @@ This usage example is for decoding the state variables of a contract `Contract`
 in a project that also contains a contract `OtherContract`.
 
 ```typescript
-import { forContract } from "@truffle/decoder";
+import { forContract } from "@dune-network/decoder";
 const contract = artifacts.require("Contract");
 const otherContract = artifacts.require("OtherContract");
 const decoder = await Decoder.forContract(contract, [otherContract]);
@@ -122,7 +122,7 @@ in one step.  If we wanted to do this with a specified address, we could use
 
 Yet another way would be:
 ```typescript
-import { forContractInstance } from "@truffle/decoder";
+import { forContractInstance } from "@dune-network/decoder";
 const contract = artifacts.require("Contract");
 const otherContract = artifacts.require("OtherContract");
 const deployedContract = await contract.deployed();
@@ -137,7 +137,7 @@ One can find more advanced decoding examples with
 [[ContractInstanceDecoder.watchMappingKey|`watchMappingKey`]] at the
 documentation for these individual functions.
  *
- * @module @truffle/decoder
+ * @module @dune-network/decoder
  */ /** */
 
 import "source-map-support/register";
@@ -173,10 +173,10 @@ import { ProjectInfo } from "./types";
 export { ProjectInfo };
 
 import { Provider } from "web3/providers";
-import { ContractObject as Artifact } from "@truffle/contract-schema/spec";
+import { ContractObject as Artifact } from "@dune-network/contract-schema/spec";
 import { ContractConstructorObject, ContractInstanceObject } from "./types";
 
-import { Compilations } from "@truffle/codec";
+import { Compilations } from "@dune-network/codec";
 
 import fs from "fs";
 import path from "path";

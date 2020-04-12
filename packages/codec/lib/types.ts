@@ -1,7 +1,7 @@
 import BN from "bn.js";
 
-import * as AbiData from "@truffle/codec/abi-data/types";
-import * as Format from "@truffle/codec/format";
+import * as AbiData from "@dune-network/codec/abi-data/types";
+import * as Format from "@dune-network/codec/format";
 
 /**
  * A type representing a transaction (calldata) decoding.  As you can see, these come in five types,

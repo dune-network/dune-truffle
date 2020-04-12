@@ -1,13 +1,13 @@
 const assert = require("chai").assert;
 const Artifactor = require("../");
-const contract = require("@truffle/contract");
-const Schema = require("@truffle/contract-schema");
+const contract = require("@dune-network/contract");
+const Schema = require("@dune-network/contract-schema");
 const temp = require("temp").track();
 const path = require("path");
 const fs = require("fs");
-const Config = require("@truffle/config");
+const Config = require("@dune-network/config");
 const requireNoCache = require("require-nocache")(module);
-const Compile = require("@truffle/compile-solidity/legacy");
+const Compile = require("@dune-network/compile-solidity/legacy");
 const Ganache = require("ganache-core");
 const Web3 = require("web3");
 const { promisify } = require("util");

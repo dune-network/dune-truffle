@@ -1,5 +1,5 @@
-import * as Format from "@truffle/codec/format";
-import { Context } from "@truffle/codec/contexts/types";
+import * as Format from "@dune-network/codec/format";
+import { Context } from "@dune-network/codec/contexts/types";
 
 export function contextToType(context: Context): Format.Types.ContractType {
   if (context.contractId !== undefined) {

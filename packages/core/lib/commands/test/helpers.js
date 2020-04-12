@@ -49,7 +49,7 @@ const determineTestFilesToRun = ({ inputFile, inputArgs = [], config }) => {
 };
 
 const prepareConfigAndRunTests = ({ config, temporaryDirectory, files }) => {
-  const Artifactor = require("@truffle/artifactor");
+  const Artifactor = require("@dune-network/artifactor");
   const Test = require("../../test");
   // Set a new artifactor; don't rely on the one created by Environments.
   // TODO: Make the test artifactor configurable.

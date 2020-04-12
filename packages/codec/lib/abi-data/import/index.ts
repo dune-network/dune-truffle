@@ -2,8 +2,8 @@ import debugModule from "debug";
 const debug = debugModule("codec:abi-data:import");
 
 import BN from "bn.js";
-import * as Format from "@truffle/codec/format/common";
-import { AbiParameter } from "@truffle/codec/abi-data/types";
+import * as Format from "@dune-network/codec/format/common";
+import { AbiParameter } from "@dune-network/codec/abi-data/types";
 
 export function abiParameterToType(abi: AbiParameter): Format.Types.Type {
   let typeName = abi.type;

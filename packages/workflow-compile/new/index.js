@@ -2,7 +2,7 @@ const debug = require("debug")("workflow-compile:new");
 const fse = require("fs-extra");
 const { prepareConfig, byContractName } = require("../utils");
 const { shimLegacy } = require("../shims");
-const { shimContract } = require("@truffle/compile-solidity/legacy/shims");
+const { shimContract } = require("@dune-network/compile-solidity/legacy/shims");
 const {
   reportCompilationStarted,
   reportNothingToCompile,
@@ -11,22 +11,22 @@ const {
 
 const SUPPORTED_COMPILERS = {
   solc: {
-    compiler: require("@truffle/compile-solidity/new")
+    compiler: require("@dune-network/compile-solidity/new")
   },
   vyper: {
-    compiler: require("@truffle/compile-vyper"),
+    compiler: require("@dune-network/compile-vyper"),
     legacy: true
   },
   ligo: {
-    compiler: require("@truffle/compile-ligo"),
+    compiler: require("@dune-network/compile-ligo"),
     legacy: true
   },
   smartpy: {
-    compiler: require("@truffle/compile-smartpy"),
+    compiler: require("@dune-network/compile-smartpy"),
     legacy: true
   },
   external: {
-    compiler: require("@truffle/external-compile"),
+    compiler: require("@dune-network/external-compile"),
     legacy: true
   }
 };

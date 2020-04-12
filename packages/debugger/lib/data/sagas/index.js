@@ -15,7 +15,7 @@ import data from "../selectors";
 
 import sum from "lodash.sum";
 
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 import BN from "bn.js";
 
 export function* scope(nodeId, pointer, parentId, sourceId, compilationId) {

@@ -1,22 +1,22 @@
 {
   "private": false,
-  "name": "@truffle/environment",
+  "name": "@dune-network/environment",
   "description": "This package contains the code needed to determine environment-specific data",
   "license": "MIT",
   "author": "Faina Shalts",
-  "homepage": "https://github.com/trufflesuite/truffle/tree/master/packages/environment#readme",
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/environment",
+  "homepage": "https://github.com/dune-network/truffle/tree/master/packages/environment#readme",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/environment",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
   "version": "0.2.2-tezos.1",
   "main": "index.js",
   "dependencies": {
-    "@truffle/artifactor": "^4.2.0-tezos.1",
-    "@truffle/error": "^0.1.0-tezos.0",
-    "@truffle/expect": "^0.1.0-tezos.0",
-    "@truffle/interface-adapter": "^0.5.0-tezos.4",
-    "@truffle/resolver": "^5.2.0-tezos.4",
+    "@dune-network/artifactor": "^4.2.0-tezos.1",
+    "@dune-network/error": "^0.1.0-tezos.0",
+    "@dune-network/expect": "^0.1.0-tezos.0",
+    "@dune-network/interface-adapter": "^0.5.0-tezos.4",
+    "@dune-network/resolver": "^5.2.0-tezos.4",
     "ganache-core": "2.10.2",
     "node-ipc": "^9.1.1",
     "source-map-support": "^0.5.16",

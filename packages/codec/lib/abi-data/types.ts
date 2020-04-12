@@ -1,4 +1,4 @@
-import * as Common from "@truffle/codec/common";
+import * as Common from "@dune-network/codec/common";
 
 export type Abi = AbiEntry[];
 

@@ -301,7 +301,7 @@ class Deployment {
       if (shouldDeploy) {
         /*
           Set timeout override. If this value is zero,
-          @truffle/contract will defer to web3's defaults:
+          @dune-network/contract will defer to web3's defaults:
           - 50 blocks (websockets) OR 50 * 15sec (http)
         */
         contract.timeoutBlocks = self.timeoutBlocks;

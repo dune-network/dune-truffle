@@ -48,8 +48,8 @@ const command = {
     ]
   },
   run: function(options, done) {
-    const Contracts = require("@truffle/workflow-compile/new");
-    const Config = require("@truffle/config");
+    const Contracts = require("@dune-network/workflow-compile/new");
+    const Config = require("@dune-network/config");
     const config = Config.detect(options);
 
     if (config.list !== undefined) {
@@ -66,7 +66,7 @@ const command = {
   },
 
   listVersions: async function(options) {
-    const { CompilerSupplier } = require("@truffle/compile-solidity");
+    const { CompilerSupplier } = require("@dune-network/compile-solidity");
     const supplier = new CompilerSupplier({
       solcConfig: options.compilers.solc,
       events: options.events

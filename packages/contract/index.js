@@ -1,5 +1,5 @@
 require("source-map-support/register");
-const Schema = require("@truffle/contract-schema");
+const Schema = require("@dune-network/contract-schema");
 const Contract = require("./lib/contract");
 const truffleContractVersion = require("./package.json").version;
 

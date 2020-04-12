@@ -1,19 +1,19 @@
 import debugModule from "debug";
 const debug = debugModule("codec:decode");
 
-import * as AstConstant from "@truffle/codec/ast-constant";
-import * as AbiData from "@truffle/codec/abi-data";
-import * as Format from "@truffle/codec/format";
-import * as Pointer from "@truffle/codec/pointer";
-import * as Basic from "@truffle/codec/basic";
-import * as Bytes from "@truffle/codec/bytes";
-import * as Evm from "@truffle/codec/evm";
-import { DecoderRequest, DecoderOptions } from "@truffle/codec/types";
-import * as Memory from "@truffle/codec/memory";
-import * as Special from "@truffle/codec/special";
-import * as Stack from "@truffle/codec/stack";
-import * as Storage from "@truffle/codec/storage";
-import * as Topic from "@truffle/codec/topic";
+import * as AstConstant from "@dune-network/codec/ast-constant";
+import * as AbiData from "@dune-network/codec/abi-data";
+import * as Format from "@dune-network/codec/format";
+import * as Pointer from "@dune-network/codec/pointer";
+import * as Basic from "@dune-network/codec/basic";
+import * as Bytes from "@dune-network/codec/bytes";
+import * as Evm from "@dune-network/codec/evm";
+import { DecoderRequest, DecoderOptions } from "@dune-network/codec/types";
+import * as Memory from "@dune-network/codec/memory";
+import * as Special from "@dune-network/codec/special";
+import * as Stack from "@dune-network/codec/stack";
+import * as Storage from "@dune-network/codec/storage";
+import * as Topic from "@dune-network/codec/topic";
 
 export default function* decode(
   dataType: Format.Types.Type,

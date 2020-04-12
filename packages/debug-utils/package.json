@@ -1,9 +1,9 @@
 {
-  "name": "@truffle/debug-utils",
+  "name": "@dune-network/debug-utils",
   "version": "4.0.3-tezos.0",
   "description": "Integration utils for truffle/debugger",
   "dependencies": {
-    "@truffle/codec": "^0.4.5-tezos.0",
+    "@dune-network/codec": "^0.4.5-tezos.0",
     "@trufflesuite/chromafi": "^2.1.2",
     "chalk": "^2.4.2",
     "debug": "^4.1.0",
@@ -15,13 +15,13 @@
   "scripts": {
     "test": "mocha"
   },
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/debug-utils",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/debug-utils",
   "author": "Truffle Suite <inquiry@trufflesuite.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
-  "homepage": "https://github.com/trufflesuite/truffle/tree/master/packages/debug-utils#readme",
+  "homepage": "https://github.com/dune-network/truffle/tree/master/packages/debug-utils#readme",
   "publishConfig": {
     "access": "public"
   },

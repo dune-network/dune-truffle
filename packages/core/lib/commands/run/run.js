@@ -1,6 +1,6 @@
 const path = require("path");
 const originalRequire = require("original-require");
-const TruffleError = require("@truffle/error");
+const TruffleError = require("@dune-network/error");
 
 const Run = {
   // initiates running the third-party command

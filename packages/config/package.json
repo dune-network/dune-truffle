@@ -1,5 +1,5 @@
 {
-  "name": "@truffle/config",
+  "name": "@dune-network/config",
   "version": "1.4.0-tezos.1",
   "description": "Utility for interacting with truffle-config.js files",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
     "prepare": "yarn build",
     "test": "yarn build && mocha --exit -r ts-node/register test/**/*.test.ts"
   },
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/config",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/config",
   "keywords": [
     "ethereum",
     "truffle",
@@ -18,9 +18,9 @@
   "author": "Tim Coulter <tim@trufflesuite.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
-  "homepage": "https://github.com/trufflesuite/truffle/tree/master/packages/config#readme",
+  "homepage": "https://github.com/dune-network/truffle/tree/master/packages/config#readme",
   "devDependencies": {
     "@types/configstore": "^4.0.0",
     "@types/find-up": "^2.1.0",
@@ -34,9 +34,9 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@truffle/error": "^0.1.0-tezos.0",
-    "@truffle/events": "^0.1.0-tezos.1",
-    "@truffle/provider": "^0.3.0-tezos.4",
+    "@dune-network/error": "^0.1.0-tezos.0",
+    "@dune-network/events": "^0.1.0-tezos.1",
+    "@dune-network/provider": "^0.3.0-tezos.4",
     "configstore": "^4.0.0",
     "find-up": "^2.1.0",
     "lodash.assignin": "^4.2.0",

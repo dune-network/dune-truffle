@@ -10,7 +10,7 @@ const command = {
     let config;
     const version = require("../version");
     const { logger } = options;
-    const Config = require("@truffle/config");
+    const Config = require("@dune-network/config");
 
     try {
       config = Config.detect(options);

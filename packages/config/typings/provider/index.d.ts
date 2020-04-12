@@ -1,1 +1,1 @@
-declare module "@truffle/provider";
+declare module "@dune-network/provider";

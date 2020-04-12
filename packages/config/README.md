@@ -1,9 +1,9 @@
-# @truffle/config
+# @dune-network/config
 Utility for interacting with truffle-config.js files
 
 ### Usage
  ```javascript
-const TruffleConfig = require("@truffle/config");
+const TruffleConfig = require("@dune-network/config");
 ```
 
 #### Instantiate default TruffleConfig object

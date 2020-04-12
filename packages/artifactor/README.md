@@ -1,9 +1,9 @@
-# @truffle/artifactor
+# @dune-network/artifactor
 
 This package saves contract artifacts into JSON files
 
 ```javascript
-const Artifactor = require("@truffle/artifactor");
+const Artifactor = require("@dune-network/artifactor");
 const artifactor = new Artifactor(__dirname);
 artifactor.save({/*...*/}); // => a promise saving MyContract.json to a given destination
 ```
@@ -16,7 +16,7 @@ artifactor.save({/*...*/}); // => a promise saving MyContract.json to a given de
 * Packages up build artifacts into `.json` files, which can then be included in your project with a simple `require`.
 * Manages library addresses for linked libraries.
 
-The artifactor can be used with [@truffle/contract](https://github.com/trufflesuite/truffle/tree/develop/packages/contract), which provides features above and beyond `web3`:
+The artifactor can be used with [@dune-network/contract](https://github.com/dune-network/truffle/tree/develop/packages/contract), which provides features above and beyond `web3`:
 
 * Synchronized transactions for better control flow: transactions won't be considered finished until you're guaranteed they've been mined.
 * Promises. No more callback hell. Works well with `ES6` and `async/await`.
@@ -26,18 +26,18 @@ The artifactor can be used with [@truffle/contract](https://github.com/trufflesu
 ### Install
 
 ```
-$ npm install @truffle/artifactor
+$ npm install @dune-network/artifactor
 ```
 
 ### Example
 
-Here, we'll generate a `.json` files given a JSON object like [@truffle/contract-schema](https://github.com/trufflesuite/truffle/tree/develop/packages/contract-schema). This will give us a file which we can later `require` into other projects and contexts.
+Here, we'll generate a `.json` files given a JSON object like [@dune-network/contract-schema](https://github.com/dune-network/truffle/tree/develop/packages/contract-schema). This will give us a file which we can later `require` into other projects and contexts.
 
 ```javascript
-const Artifactor = require("@truffle/artifactor");
+const Artifactor = require("@dune-network/artifactor");
 const artifactor = new Artifactor(__dirname);
 
-// See truffle-schema for more info: https://github.com/trufflesuite/truffle/tree/develop/packages/contract-schema
+// See truffle-schema for more info: https://github.com/dune-network/truffle/tree/develop/packages/contract-schema
 const contractData = {
   contractName: "...",        // String; optional.
   abi: ...,                   // Array; required.

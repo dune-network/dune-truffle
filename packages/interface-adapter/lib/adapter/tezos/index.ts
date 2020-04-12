@@ -1,5 +1,5 @@
 import { InterfaceAdapter, BlockType } from "../types";
-import Config from "@truffle/config";
+import Config from "@dune-network/config";
 import { Provider } from "web3/providers";
 import { TezosToolkit, Tezos } from "@taquito/taquito";
 

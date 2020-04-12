@@ -1,18 +1,18 @@
-import * as Common from "@truffle/codec/common";
-import * as Storage from "@truffle/codec/storage/types";
-import * as Ast from "@truffle/codec/ast";
+import * as Common from "@dune-network/codec/common";
+import * as Storage from "@dune-network/codec/storage/types";
+import * as Ast from "@dune-network/codec/ast";
 import {
   StorageAllocations,
   StateAllocations
-} from "@truffle/codec/storage/allocate/types";
-import { MemoryAllocations } from "@truffle/codec/memory/allocate/types";
+} from "@dune-network/codec/storage/allocate/types";
+import { MemoryAllocations } from "@dune-network/codec/memory/allocate/types";
 import {
   AbiAllocations,
   CalldataAllocations,
   EventAllocations
-} from "@truffle/codec/abi-data/allocate/types";
-import * as Contexts from "@truffle/codec/contexts/types";
-import * as Format from "@truffle/codec/format";
+} from "@dune-network/codec/abi-data/allocate/types";
+import * as Contexts from "@dune-network/codec/contexts/types";
+import * as Format from "@dune-network/codec/format";
 
 export interface EvmState {
   storage: WordMapping;

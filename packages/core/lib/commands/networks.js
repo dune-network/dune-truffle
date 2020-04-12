@@ -20,7 +20,7 @@ var command = {
     ]
   },
   run: function(options, done) {
-    const Config = require("@truffle/config");
+    const Config = require("@dune-network/config");
     const Networks = require("../networks");
 
     const config = Config.detect(options);

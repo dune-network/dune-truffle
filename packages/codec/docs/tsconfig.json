@@ -10,8 +10,8 @@
     "baseUrl": "..",
     "lib": ["es2017"],
     "paths": {
-      "@truffle/codec": ["../codec/lib"],
-      "@truffle/codec/*": ["../codec/lib/*"],
+      "@dune-network/codec": ["../codec/lib"],
+      "@dune-network/codec/*": ["../codec/lib/*"],
       "web3": ["../../node_modules/@types/web3/index", "node_modules/web3/index"],
       "web3/types": ["../../node_modules/@types/web3/types", "node_modules/web3/types"],
       "web3/eth/types": ["../../node_modules/@types/web3/eth/types", "node_modules/web3/eth/types"]

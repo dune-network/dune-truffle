@@ -1,6 +1,6 @@
-import * as Format from "@truffle/codec/format";
-import * as Conversion from "@truffle/codec/conversion";
-import * as Evm from "@truffle/codec/evm";
+import * as Format from "@dune-network/codec/format";
+import * as Conversion from "@dune-network/codec/conversion";
+import * as Evm from "@dune-network/codec/evm";
 import utf8 from "utf8";
 
 //UGH -- it turns out TypeScript can't handle nested tagged unions

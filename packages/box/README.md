@@ -1,4 +1,4 @@
-@truffle/box
+@dune-network/box
 ===========
 
 Truffle Box management functionality.
@@ -8,9 +8,9 @@ Handles behavior for unboxing a new project from a predefined Truffle Box.
 ### Usage
 
 ```javascript
-const TruffleBox = require("@truffle/box");
+const TruffleBox = require("@dune-network/box");
 
-// `@truffle/box` prompts when unboxing into non-empty directories & before potential overwrites
+// `@dune-network/box` prompts when unboxing into non-empty directories & before potential overwrites
 // a `force` option can be passed to force unboxing. default is false
 const unboxOptions = { force: false };
 

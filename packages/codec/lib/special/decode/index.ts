@@ -1,13 +1,13 @@
 import debugModule from "debug";
 const debug = debugModule("codec:special:decode");
 
-import * as Format from "@truffle/codec/format";
-import * as Basic from "@truffle/codec/basic";
-import * as Bytes from "@truffle/codec/bytes";
-import * as Compiler from "@truffle/codec/compiler";
-import * as Pointer from "@truffle/codec/pointer";
-import { DecoderRequest } from "@truffle/codec/types";
-import * as Evm from "@truffle/codec/evm";
+import * as Format from "@dune-network/codec/format";
+import * as Basic from "@dune-network/codec/basic";
+import * as Bytes from "@dune-network/codec/bytes";
+import * as Compiler from "@dune-network/codec/compiler";
+import * as Pointer from "@dune-network/codec/pointer";
+import { DecoderRequest } from "@dune-network/codec/types";
+import * as Evm from "@dune-network/codec/evm";
 
 export function* decodeSpecial(
   dataType: Format.Types.Type,

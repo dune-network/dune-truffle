@@ -1,7 +1,7 @@
 import { Block as EvmBlock, Tx as EvmTransaction } from "web3/eth/types";
 import { TransactionReceipt as EvmTransactionReceipt } from "web3/types";
 import { Provider } from "web3/providers";
-import Config from "@truffle/config";
+import Config from "@dune-network/config";
 
 export { BlockType as EvmBlockType } from "web3/eth/types";
 export type NetworkId = Number | String;

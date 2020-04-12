@@ -10,7 +10,7 @@ import Debugger from "lib/debugger";
 
 import trace from "lib/trace/selectors";
 import solidity from "lib/solidity/selectors";
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 const __FACTORIAL = `
 pragma solidity ^0.6.1;

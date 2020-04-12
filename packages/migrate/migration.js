@@ -1,8 +1,8 @@
 const path = require("path");
-const Deployer = require("@truffle/deployer");
-const Require = require("@truffle/require");
+const Deployer = require("@dune-network/deployer");
+const Require = require("@dune-network/require");
 const Emittery = require("emittery");
-const { createInterfaceAdapter } = require("@truffle/interface-adapter");
+const { createInterfaceAdapter } = require("@dune-network/interface-adapter");
 
 const ResolverIntercept = require("./resolverintercept");
 

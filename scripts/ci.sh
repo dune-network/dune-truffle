@@ -40,7 +40,7 @@ elif [ "$GETH" = true ]; then
   run_geth
   sleep 30
   lerna run --scope truffle test --stream -- --exit
-  lerna run --scope @truffle/contract test --stream -- --exit
+  lerna run --scope @dune-network/contract test --stream -- --exit
 
 elif [ "$QUORUM" = true ]; then
 

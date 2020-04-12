@@ -1,14 +1,14 @@
-const { createInterfaceAdapter } = require("@truffle/interface-adapter");
+const { createInterfaceAdapter } = require("@dune-network/interface-adapter");
 const web3Utils = require("web3-utils");
-const Config = require("@truffle/config");
-const Migrate = require("@truffle/migrate");
+const Config = require("@dune-network/config");
+const Migrate = require("@dune-network/migrate");
 const TestResolver = require("./testresolver");
 const TestSource = require("./testsource");
-const expect = require("@truffle/expect");
+const expect = require("@dune-network/expect");
 const util = require("util");
 const debug = require("debug")("lib:testing:testrunner");
-const Decoder = require("@truffle/decoder");
-const Codec = require("@truffle/codec");
+const Decoder = require("@dune-network/decoder");
+const Codec = require("@dune-network/codec");
 
 function TestRunner(options = {}) {
   expect.options(options, [

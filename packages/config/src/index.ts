@@ -5,10 +5,10 @@ import merge from "lodash.merge";
 import Module from "module";
 import findUp from "find-up";
 import Configstore from "configstore";
-import TruffleError from "@truffle/error";
+import TruffleError from "@dune-network/error";
 import originalRequire from "original-require";
 import { getInitialConfig, configProps } from "./configDefaults";
-import { EventManager } from "@truffle/events";
+import { EventManager } from "@dune-network/events";
 
 const DEFAULT_CONFIG_FILENAME = "truffle-config.js";
 const BACKUP_CONFIG_FILENAME = "truffle.js"; // old config filename

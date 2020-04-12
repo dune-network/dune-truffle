@@ -1,13 +1,13 @@
 const assert = require("chai").assert;
-const Box = require("@truffle/box");
-const Artifactor = require("@truffle/artifactor");
-const Resolver = require("@truffle/resolver");
+const Box = require("@dune-network/box");
+const Artifactor = require("@dune-network/artifactor");
+const Resolver = require("@dune-network/resolver");
 const MemoryStream = require("memorystream");
 const command = require("../../../lib/commands/config");
 const path = require("path");
 const fs = require("fs-extra");
 const glob = require("glob");
-const Config = require("@truffle/config");
+const Config = require("@dune-network/config");
 
 describe("config", function() {
   var config;

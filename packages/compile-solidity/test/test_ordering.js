@@ -1,7 +1,7 @@
 const debug = require("debug")("compile:test:test_ordering");
 const fs = require("fs");
 const path = require("path");
-const compile = require("@truffle/compile-solidity/new");
+const compile = require("@dune-network/compile-solidity/new");
 const CompilerSupplier = require("../compilerSupplier");
 const assert = require("assert");
 const { findOne } = require("./helpers");
@@ -157,7 +157,7 @@ describe("Compile - solidity ^0.4.0", function() {
       assert.deepEqual(abi, expectedOrder);
     });
 
-    // Ported from `@truffle/solidity-utils`
+    // Ported from `@dune-network/solidity-utils`
     it("orders the ABI of a contract without functions", async function() {
       var sources = {};
       // ComplexOrdered.sol includes contract `Empty`

@@ -1,11 +1,11 @@
 const ReplManager = require("./repl");
 const Command = require("./command");
-const provision = require("@truffle/provisioner");
-const { createInterfaceAdapter } = require("@truffle/interface-adapter");
-const contract = require("@truffle/contract");
+const provision = require("@dune-network/provisioner");
+const { createInterfaceAdapter } = require("@dune-network/interface-adapter");
+const contract = require("@dune-network/contract");
 const vm = require("vm");
-const expect = require("@truffle/expect");
-const TruffleError = require("@truffle/error");
+const expect = require("@dune-network/expect");
+const TruffleError = require("@dune-network/error");
 const fse = require("fs-extra");
 const path = require("path");
 const EventEmitter = require("events");

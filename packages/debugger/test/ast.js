@@ -11,7 +11,7 @@ import Debugger from "lib/debugger";
 import solidity from "lib/solidity/selectors";
 import trace from "lib/trace/selectors";
 
-import SolidityUtils from "@truffle/solidity-utils";
+import SolidityUtils from "@dune-network/solidity-utils";
 
 const __VARIABLES = `
 pragma solidity ^0.6.1;

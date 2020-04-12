@@ -1,14 +1,14 @@
 var assert = require("chai").assert;
-var Box = require("@truffle/box");
+var Box = require("@dune-network/box");
 var fs = require("fs-extra");
 var glob = require("glob");
 var path = require("path");
-var Contracts = require("@truffle/workflow-compile");
+var Contracts = require("@dune-network/workflow-compile");
 var Package = require("../lib/package.js");
-var Blockchain = require("@truffle/blockchain-utils");
+var Blockchain = require("@dune-network/blockchain-utils");
 var Ganache = require("ganache-core");
-var Resolver = require("@truffle/resolver");
-var Artifactor = require("@truffle/artifactor");
+var Resolver = require("@dune-network/resolver");
+var Artifactor = require("@dune-network/artifactor");
 
 describe.skip("EthPM integration", function() {
   var config;

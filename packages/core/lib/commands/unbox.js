@@ -97,8 +97,8 @@ const command = {
     ]
   },
   run(options, done) {
-    const Config = require("@truffle/config");
-    const Box = require("@truffle/box");
+    const Config = require("@dune-network/config");
+    const Box = require("@dune-network/box");
     const fse = require("fs-extra");
 
     const config = Config.default().with({ logger: console });

@@ -1,1 +1,1 @@
-declare module "@truffle/events";
+declare module "@dune-network/events";

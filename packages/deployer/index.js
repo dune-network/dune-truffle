@@ -1,4 +1,4 @@
-const expect = require("@truffle/expect");
+const expect = require("@dune-network/expect");
 const Emittery = require("emittery");
 const DeferredChain = require("./src/deferredchain");
 const Deployment = require("./src/deployment");

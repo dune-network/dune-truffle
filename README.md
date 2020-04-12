@@ -1,3 +1,14 @@
+Adaptation of Truffle for Dune Network
+======================================
+
+This is an adaptation of Truffle for Dune Network.
+
+The branch `dune-network` is forked from `alphaTez`.
+Last merge: alphaTez:f85aa2d6ee4b0f5d0c8eb2b4ab6a68736e9ebeb8
+
+Old README.md
+=============
+
 <img src="https://truffleframework.com/img/truffle-logo-dark.svg" width="200">
 
 [![npm](https://img.shields.io/npm/v/truffle.svg)](https://www.npmjs.com/package/truffle)
@@ -8,7 +19,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/trufflesuite/truffle/badge.svg)](https://coveralls.io/github/trufflesuite/truffle)
 
 -----------------------
-
 
 Truffle is a development environment, testing framework and asset pipeline for Ethereum, aiming to make life as an Ethereum developer easier. With Truffle, you get:
 

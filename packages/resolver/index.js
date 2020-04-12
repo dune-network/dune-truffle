@@ -1,7 +1,7 @@
 const whilst = require("async/whilst");
-const contract = require("@truffle/contract");
-const expect = require("@truffle/expect");
-const provision = require("@truffle/provisioner");
+const contract = require("@dune-network/contract");
+const expect = require("@dune-network/expect");
+const provision = require("@dune-network/provisioner");
 const sources = require("./sources");
 
 function Resolver(options) {

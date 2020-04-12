@@ -1,12 +1,12 @@
 {
-  "name": "@truffle/migrate",
+  "name": "@dune-network/migrate",
   "description": "On-chain migrations management",
   "license": "MIT",
   "author": "Tim Coulter <tim@trufflesuite.com>",
-  "homepage": "https://github.com/trufflesuite/truffle/tree/master/packages/migrate#readme",
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/migrate",
+  "homepage": "https://github.com/dune-network/truffle/tree/master/packages/migrate#readme",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/migrate",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
   "version": "3.4.0-tezos.0",
   "main": "index.js",
@@ -14,12 +14,12 @@
     "test": "mocha ./test/* ./test/**/*"
   },
   "dependencies": {
-    "@truffle/config": "^1.4.0-tezos.1",
-    "@truffle/deployer": "^3.2.0-tezos.4",
-    "@truffle/expect": "^0.1.0-tezos.0",
-    "@truffle/interface-adapter": "^0.5.0-tezos.4",
-    "@truffle/reporters": "^1.1.0-tezos.1",
-    "@truffle/require": "^2.1.0-tezos.1",
+    "@dune-network/config": "^1.4.0-tezos.1",
+    "@dune-network/deployer": "^3.2.0-tezos.4",
+    "@dune-network/expect": "^0.1.0-tezos.0",
+    "@dune-network/interface-adapter": "^0.5.0-tezos.4",
+    "@dune-network/reporters": "^1.1.0-tezos.1",
+    "@dune-network/require": "^2.1.0-tezos.1",
     "emittery": "^0.4.0",
     "glob": "^7.1.6",
     "web3": "1.2.1"

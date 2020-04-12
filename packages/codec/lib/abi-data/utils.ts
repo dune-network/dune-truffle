@@ -3,10 +3,10 @@ const debug = debugModule("codec:abi-data:utils");
 
 // untyped import since no @types/web3-utils exists
 const Web3Utils = require("web3-utils");
-import { Abi as SchemaAbi } from "@truffle/contract-schema/spec";
-import * as Evm from "@truffle/codec/evm";
-import * as Common from "@truffle/codec/common";
-import * as Ast from "@truffle/codec/ast";
+import { Abi as SchemaAbi } from "@dune-network/contract-schema/spec";
+import * as Evm from "@dune-network/codec/evm";
+import * as Common from "@dune-network/codec/common";
+import * as Ast from "@dune-network/codec/ast";
 import * as Abi from "./types";
 
 //NOTE: SchemaAbi is kind of loose and a pain to use.

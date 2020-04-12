@@ -1,12 +1,12 @@
 {
-  "name": "@truffle/contract-schema",
+  "name": "@dune-network/contract-schema",
   "description": "JSON schema for contract artifacts",
   "license": "MIT",
   "author": "Tim Coulter <tim@trufflesuite.com>",
-  "homepage": "https://github.com/trufflesuite/truffle/tree/master/packages/contract-schema#readme",
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/contract-schema",
+  "homepage": "https://github.com/dune-network/truffle/tree/master/packages/contract-schema#readme",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/contract-schema",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
   "version": "3.2.0-tezos.0",
   "main": "index.js",

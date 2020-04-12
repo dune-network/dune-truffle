@@ -1,9 +1,9 @@
 import debugModule from "debug";
 const debug = debugModule("codec:compilations:utils");
 
-import * as Ast from "@truffle/codec/ast";
-import * as Compiler from "@truffle/codec/compiler";
-import { ContractObject as Artifact } from "@truffle/contract-schema/spec";
+import * as Ast from "@dune-network/codec/ast";
+import * as Compiler from "@dune-network/codec/compiler";
+import { ContractObject as Artifact } from "@dune-network/contract-schema/spec";
 import { Compilation, Contract, Source } from "./types";
 
 export function shimArtifacts(

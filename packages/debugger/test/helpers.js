@@ -3,14 +3,14 @@ const debug = debugModule("test:helpers");
 
 import path from "path";
 import fs from "fs-extra";
-import Contracts from "@truffle/workflow-compile";
-import Debug from "@truffle/debug-utils";
-import Artifactor from "@truffle/artifactor";
+import Contracts from "@dune-network/workflow-compile";
+import Debug from "@dune-network/debug-utils";
+import Artifactor from "@dune-network/artifactor";
 import Web3 from "web3";
-import Migrate from "@truffle/migrate";
-import Box from "@truffle/box";
-import Resolver from "@truffle/resolver";
-import * as Codec from "@truffle/codec";
+import Migrate from "@dune-network/migrate";
+import Box from "@dune-network/box";
+import Resolver from "@dune-network/resolver";
+import * as Codec from "@dune-network/codec";
 
 export async function prepareContracts(provider, sources = {}, migrations) {
   let config = await createSandbox();

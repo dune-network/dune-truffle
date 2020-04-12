@@ -2,7 +2,7 @@ const assert = require("assert");
 const sinon = require("sinon");
 const runHandler = require("../../lib/commands/run/run");
 const pluginLoader = require("../../lib/commands/run/plugin");
-const TruffleError = require("@truffle/error");
+const TruffleError = require("@dune-network/error");
 
 describe("run handler", () => {
   let nonCommandPlugins, commandPlugins, spyDone;

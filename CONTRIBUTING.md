@@ -2,7 +2,7 @@
 
 Truffle uses lerna to manage multi-package repositories. Each Truffle module is defined in its own npm package in the `packages/` directory.
 
-The entry point of these modules is `@truffle/core`. This is where the command line parser is setup.
+The entry point of these modules is `@dune-network/core`. This is where the command line parser is setup.
 
 Install lerna:
 
@@ -13,7 +13,7 @@ $ npm install -g yarn
 
 # The command flow
 
-The heart of Truffle lies in the `@truffle/core` package. Whenever a command
+The heart of Truffle lies in the `@dune-network/core` package. Whenever a command
 is run, `packages/core/cli.js` gets run with everything following `truffle`
 (on the command line) being passed in as arguments. In other words, if you run
 `truffle migrate --network myNetwork`, then `packages/core/cli.js` gets run
@@ -25,7 +25,7 @@ commands and options the user has provided, instantiates an instance of the
 is the interface that `cli.js` uses for ALL commands. You can find all of the
 specific command files (one file for each command) at
 `packages/core/lib/commands`. From the run method of each command you should be
-able to trace the command lifecycle to libraries and modules in `@truffle/core`
+able to trace the command lifecycle to libraries and modules in `@dune-network/core`
 as well as other packages in the monorepo.
 
 # Add a new command in truffle
@@ -36,13 +36,13 @@ as well as other packages in the monorepo.
 $ lerna create truffle-mycmd
 ```
 
-### Add the package to `@truffle/core`
+### Add the package to `@dune-network/core`
 
 ```shell
-$ lerna add truffle-mycmd --scope=@truffle/core
+$ lerna add truffle-mycmd --scope=@dune-network/core
 ```
 
-### Create a new command in `@truffle/core`
+### Create a new command in `@dune-network/core`
 
 Create a new file in `packages/core/lib/commands/`, let's call it `mycmd.js`.
 

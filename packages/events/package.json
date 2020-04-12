@@ -1,5 +1,5 @@
 {
-  "name": "@truffle/events",
+  "name": "@dune-network/events",
   "version": "0.1.0-tezos.1",
   "description": "Event system for Truffle",
   "main": "index.js",

@@ -1,10 +1,10 @@
-# @truffle/code-utils
+# @dune-network/code-utils
 Utilities for parsing and managing EVM-compatible bytecode
 
 ### Usage
 
 ```javascript
-const { parseCode } = require("@truffle/code-utils");
+const { parseCode } = require("@dune-network/code-utils");
 
 const contractHexCode = "0x608060...";
 

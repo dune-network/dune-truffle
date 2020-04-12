@@ -7,7 +7,7 @@ import Ganache from "ganache-core";
 
 import { prepareContracts, lineOf } from "../helpers";
 import Debugger from "lib/debugger";
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 import solidity from "lib/solidity/selectors";
 

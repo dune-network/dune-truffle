@@ -1,4 +1,4 @@
-const TruffleError = require("@truffle/error");
+const TruffleError = require("@dune-network/error");
 const inherits = require("util").inherits;
 const utils = require("./utils");
 

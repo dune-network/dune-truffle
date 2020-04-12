@@ -1,15 +1,15 @@
 import debugModule from "debug";
 const debug = debugModule("codec:abi-data:allocate");
 
-import * as AbiData from "@truffle/codec/abi-data/types";
-import * as Import from "@truffle/codec/abi-data/import";
-import * as AbiDataUtils from "@truffle/codec/abi-data/utils";
-import * as Evm from "@truffle/codec/evm";
-import * as Common from "@truffle/codec/common";
-import * as Compiler from "@truffle/codec/compiler";
-import * as Ast from "@truffle/codec/ast";
-import * as Contexts from "@truffle/codec/contexts";
-import * as Pointer from "@truffle/codec/pointer";
+import * as AbiData from "@dune-network/codec/abi-data/types";
+import * as Import from "@dune-network/codec/abi-data/import";
+import * as AbiDataUtils from "@dune-network/codec/abi-data/utils";
+import * as Evm from "@dune-network/codec/evm";
+import * as Common from "@dune-network/codec/common";
+import * as Compiler from "@dune-network/codec/compiler";
+import * as Ast from "@dune-network/codec/ast";
+import * as Contexts from "@dune-network/codec/contexts";
+import * as Pointer from "@dune-network/codec/pointer";
 import {
   AbiAllocation,
   AbiAllocations,
@@ -28,8 +28,8 @@ import {
   EventAllocationTemporary,
   EventArgumentAllocation
 } from "./types";
-import { DecodingMode } from "@truffle/codec/types";
-import * as Format from "@truffle/codec/format";
+import { DecodingMode } from "@dune-network/codec/types";
+import * as Format from "@dune-network/codec/format";
 import partition from "lodash.partition";
 
 export {

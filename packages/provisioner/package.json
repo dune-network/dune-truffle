@@ -1,10 +1,10 @@
 {
-  "name": "@truffle/provisioner",
+  "name": "@dune-network/provisioner",
   "version": "0.3.0-tezos.0",
   "description": "Provision contract objects for use from multiple sources",
   "main": "index.js",
   "scripts": {},
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/provisioner",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/provisioner",
   "keywords": [
     "ethereum",
     "truffle",
@@ -14,9 +14,9 @@
   "author": "Tim Coulter <tim@trufflesuite.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
-  "homepage": "https://github.com/trufflesuite/truffle/tree/master/packages/provisioner#readme",
+  "homepage": "https://github.com/dune-network/truffle/tree/master/packages/provisioner#readme",
   "publishConfig": {
     "access": "public"
   }

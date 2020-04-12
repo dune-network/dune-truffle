@@ -1,4 +1,4 @@
-const Config = require("@truffle/config");
+const Config = require("@dune-network/config");
 const version = require("../../lib/version");
 const assert = require("assert");
 const truffleVersion = require("../../package.json").version;

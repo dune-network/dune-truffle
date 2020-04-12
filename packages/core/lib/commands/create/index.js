@@ -29,7 +29,7 @@ const command = {
     ]
   },
   run: function(options, done) {
-    const Config = require("@truffle/config");
+    const Config = require("@dune-network/config");
     const ConfigurationError = require("../../errors/configurationerror");
     const create = require("./helpers");
 

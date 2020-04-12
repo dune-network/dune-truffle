@@ -1,6 +1,6 @@
 const path = require("path");
 const assert = require("assert");
-const Config = require("@truffle/config");
+const Config = require("@dune-network/config");
 const compile = require("../index");
 
 describe("smartpy compiler", () => {

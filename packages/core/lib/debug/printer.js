@@ -4,10 +4,10 @@ const debug = debugModule("lib:debug:printer");
 const path = require("path");
 const safeEval = require("safe-eval");
 
-const DebugUtils = require("@truffle/debug-utils");
-const Codec = require("@truffle/codec");
+const DebugUtils = require("@dune-network/debug-utils");
+const Codec = require("@dune-network/codec");
 
-const selectors = require("@truffle/debugger").selectors;
+const selectors = require("@dune-network/debugger").selectors;
 const { session, solidity, trace, controller, data, evm } = selectors;
 
 class DebugPrinter {

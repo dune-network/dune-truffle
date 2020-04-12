@@ -1,7 +1,7 @@
 import fse from "fs-extra";
 import merge from "lodash.merge";
 import assign from "lodash.assign";
-import { ContractObject } from "@truffle/contract-schema";
+import { ContractObject } from "@dune-network/contract-schema";
 
 export function writeArtifact(
   completeArtifact: ContractObject,

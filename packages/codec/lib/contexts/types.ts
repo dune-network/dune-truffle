@@ -1,6 +1,6 @@
-import * as AbiData from "@truffle/codec/abi-data/types";
-import * as Common from "@truffle/codec/common";
-import * as Compiler from "@truffle/codec/compiler";
+import * as AbiData from "@dune-network/codec/abi-data/types";
+import * as Common from "@dune-network/codec/common";
+import * as Compiler from "@dune-network/codec/compiler";
 
 export type Contexts = DecoderContexts | DebuggerContexts;
 

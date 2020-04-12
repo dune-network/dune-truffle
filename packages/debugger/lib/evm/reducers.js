@@ -5,7 +5,7 @@ import { combineReducers } from "redux";
 
 import * as actions from "./actions";
 import { keccak256 } from "lib/helpers";
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 import BN from "bn.js";
 

@@ -1,13 +1,13 @@
 {
-  "name": "@truffle/compile-solidity",
+  "name": "@dune-network/compile-solidity",
   "description": "Compiler helper and artifact manager for Solidity files",
   "version": "4.3.0-tezos.0",
   "main": "index.js",
   "dependencies": {
-    "@truffle/config": "^1.4.0-tezos.1",
-    "@truffle/contract-sources": "^0.3.0-tezos.0",
-    "@truffle/error": "^0.1.0-tezos.0",
-    "@truffle/expect": "^0.1.0-tezos.0",
+    "@dune-network/config": "^1.4.0-tezos.1",
+    "@dune-network/contract-sources": "^0.3.0-tezos.0",
+    "@dune-network/error": "^0.1.0-tezos.0",
+    "@dune-network/expect": "^0.1.0-tezos.0",
     "colors": "^1.1.2",
     "debug": "^4.1.0",
     "fs-extra": "^8.1.0",
@@ -20,7 +20,7 @@
     "solc": "^0.6.0"
   },
   "devDependencies": {
-    "@truffle/resolver": "^5.2.0-tezos.4",
+    "@dune-network/resolver": "^5.2.0-tezos.4",
     "babel-core": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
@@ -36,7 +36,7 @@
   "scripts": {
     "test": "./scripts/test.sh"
   },
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/compile-solidity",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/compile-solidity",
   "keywords": [
     "ethereum",
     "truffle",
@@ -46,7 +46,7 @@
   "author": "Tim Coulter <tim@trufflesuite.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
   "homepage": "https://github.com/trufflesuite/compile-solidity#readme",
   "publishConfig": {

@@ -1,10 +1,10 @@
 {
-  "name": "@truffle/contract-sources",
+  "name": "@dune-network/contract-sources",
   "version": "0.3.0-tezos.0",
   "description": "Utility for finding all contracts within a directory",
   "main": "index.js",
   "scripts": {},
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/contract-sources",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/contract-sources",
   "keywords": [
     "ethereum",
     "contracts",
@@ -14,9 +14,9 @@
   "author": "Tim Coulter <tim@trufflesuite.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
-  "homepage": "https://github.com/trufflesuite/truffle/tree/master/packages/contract-sources#readme",
+  "homepage": "https://github.com/dune-network/truffle/tree/master/packages/contract-sources#readme",
   "dependencies": {
     "debug": "^4.1.0",
     "glob": "^7.1.2"

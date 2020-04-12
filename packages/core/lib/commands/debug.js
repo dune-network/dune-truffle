@@ -20,8 +20,8 @@ const command = {
     const debugModule = require("debug");
     const debug = debugModule("lib:commands:debug");
 
-    const { Environment } = require("@truffle/environment");
-    const Config = require("@truffle/config");
+    const { Environment } = require("@dune-network/environment");
+    const Config = require("@dune-network/config");
 
     const { CLIDebugger } = require("../debug");
 

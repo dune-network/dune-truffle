@@ -30,8 +30,8 @@ import {
   ContractValueInfoKnown,
   ContractValueInfoUnknown
 } from "./elementary";
-import * as Common from "@truffle/codec/common";
-import * as AbiData from "@truffle/codec/abi-data/types";
+import * as Common from "@dune-network/codec/common";
+import * as AbiData from "@dune-network/codec/abi-data/types";
 
 export * from "./elementary";
 

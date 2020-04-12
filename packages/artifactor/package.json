@@ -1,10 +1,10 @@
 {
   "private": false,
-  "name": "@truffle/artifactor",
+  "name": "@dune-network/artifactor",
   "description": "A contract packager for Ethereum and Javascript",
   "license": "MIT",
   "author": "Tim Coulter",
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/artifactor",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/artifactor",
   "version": "4.2.0-tezos.1",
   "main": "dist/index.js",
   "scripts": {
@@ -13,14 +13,14 @@
     "test": "mocha"
   },
   "dependencies": {
-    "@truffle/contract-schema": "^3.2.0-tezos.0",
+    "@dune-network/contract-schema": "^3.2.0-tezos.0",
     "fs-extra": "^8.1.0",
     "lodash.assign": "^4.2.0",
     "lodash.merge": "^4.6.2",
     "source-map-support": "^0.5.16"
   },
   "devDependencies": {
-    "@truffle/contract": "^4.3.0-tezos.1",
+    "@dune-network/contract": "^4.3.0-tezos.1",
     "@types/fs-extra": "^8.1.0",
     "@types/lodash.assign": "^4.2.6",
     "@types/lodash.merge": "^4.6.6",

@@ -1,16 +1,16 @@
-# @truffle/workflow-compile
+# @dune-network/workflow-compile
 Core workflow logic for the `truffle compile` command behavior
 
 ### install
 
 ```
-$ npm install @truffle/workflow-compile
+$ npm install @dune-network/workflow-compile
 ```
 
 ### Usage
 
 ```javascript
-const Contracts = require("@truffle/workflow-compile");
+const Contracts = require("@dune-network/workflow-compile");
 
 // expected config object
 const config = {

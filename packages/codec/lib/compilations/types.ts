@@ -1,6 +1,6 @@
-import * as Compiler from "@truffle/codec/compiler";
-import * as Ast from "@truffle/codec/ast";
-import { Abi as SchemaAbi } from "@truffle/contract-schema/spec";
+import * as Compiler from "@dune-network/codec/compiler";
+import * as Ast from "@dune-network/codec/ast";
+import { Abi as SchemaAbi } from "@dune-network/contract-schema/spec";
 
 //Note to other people passing in compilations:
 //Please include all fields you can that aren't

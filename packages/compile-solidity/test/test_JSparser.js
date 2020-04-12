@@ -1,8 +1,8 @@
 const path = require("path");
 const assert = require("assert");
-const Resolver = require("@truffle/resolver");
+const Resolver = require("@dune-network/resolver");
 const compile = require("../index");
-const Config = require("@truffle/config");
+const Config = require("@dune-network/config");
 
 describe("JSparser", () => {
   const options = {

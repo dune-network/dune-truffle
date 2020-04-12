@@ -1,11 +1,11 @@
 const TestCase = require("mocha/lib/test.js");
 const Suite = require("mocha/lib/suite.js");
-const Deployer = require("@truffle/deployer");
-const compile = require("@truffle/compile-solidity/new");
-const { shimContract } = require("@truffle/compile-solidity/legacy/shims");
+const Deployer = require("@dune-network/deployer");
+const compile = require("@dune-network/compile-solidity/new");
+const { shimContract } = require("@dune-network/compile-solidity/legacy/shims");
 const path = require("path");
 const semver = require("semver");
-const Native = require("@truffle/compile-solidity/compilerSupplier/loadingStrategies/Native");
+const Native = require("@dune-network/compile-solidity/compilerSupplier/loadingStrategies/Native");
 const debug = require("debug")("lib:testing:soliditytest");
 
 let SafeSend;

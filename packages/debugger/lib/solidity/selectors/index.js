@@ -2,7 +2,7 @@ import debugModule from "debug";
 const debug = debugModule("debugger:solidity:selectors");
 
 import { createSelectorTree, createLeaf } from "reselect-tree";
-import SolidityUtils from "@truffle/solidity-utils";
+import SolidityUtils from "@dune-network/solidity-utils";
 
 import semver from "semver";
 

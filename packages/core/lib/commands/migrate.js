@@ -154,11 +154,11 @@ const command = {
   },
 
   prepareConfigForRealMigrations: async function(buildDir, options) {
-    const Artifactor = require("@truffle/artifactor");
-    const Resolver = require("@truffle/resolver");
-    const Migrate = require("@truffle/migrate");
-    const { Environment } = require("@truffle/environment");
-    const Config = require("@truffle/config");
+    const Artifactor = require("@dune-network/artifactor");
+    const Resolver = require("@dune-network/resolver");
+    const Migrate = require("@dune-network/migrate");
+    const { Environment } = require("@dune-network/environment");
+    const Config = require("@dune-network/config");
 
     let accept = true;
 
@@ -187,12 +187,12 @@ const command = {
   },
 
   run: function(options, done) {
-    const Artifactor = require("@truffle/artifactor");
-    const Resolver = require("@truffle/resolver");
-    const Migrate = require("@truffle/migrate");
-    const Contracts = require("@truffle/workflow-compile");
-    const { Environment } = require("@truffle/environment");
-    const Config = require("@truffle/config");
+    const Artifactor = require("@dune-network/artifactor");
+    const Resolver = require("@dune-network/resolver");
+    const Migrate = require("@dune-network/migrate");
+    const Contracts = require("@dune-network/workflow-compile");
+    const { Environment } = require("@dune-network/environment");
+    const Config = require("@dune-network/config");
     const temp = require("temp").track();
     const { promisify } = require("util");
     const promisifiedCopy = promisify(require("../copy"));

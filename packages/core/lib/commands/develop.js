@@ -24,7 +24,7 @@ const command = {
   },
   runConsole: (config, ganacheOptions, done) => {
     const Console = require("../console");
-    const { Environment } = require("@truffle/environment");
+    const { Environment } = require("@dune-network/environment");
 
     const commands = require("./index");
     const excluded = ["console", "develop", "unbox", "init"];
@@ -50,8 +50,8 @@ const command = {
       .catch(err => done(err));
   },
   run: (options, done) => {
-    const { Develop } = require("@truffle/environment");
-    const Config = require("@truffle/config");
+    const { Develop } = require("@dune-network/environment");
+    const Config = require("@dune-network/config");
 
     const config = Config.detect(options);
     const customConfig = config.networks.develop || {};

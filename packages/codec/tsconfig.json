@@ -12,8 +12,8 @@
     "baseUrl": ".",
     "lib": ["es2017"],
     "paths": {
-      "@truffle/codec": ["./lib"],
-      "@truffle/codec/*": ["./lib/*"]
+      "@dune-network/codec": ["./lib"],
+      "@dune-network/codec/*": ["./lib/*"]
     },
     "plugins": [
       { "transform": "@zerollup/ts-transform-paths", "exclude": "*" }

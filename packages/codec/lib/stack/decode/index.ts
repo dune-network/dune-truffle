@@ -1,18 +1,18 @@
 import debugModule from "debug";
 const debug = debugModule("codec:stack:decode");
 
-import * as AbiData from "@truffle/codec/abi-data";
-import * as Conversion from "@truffle/codec/conversion";
-import * as Format from "@truffle/codec/format";
-import read from "@truffle/codec/read";
-import * as Basic from "@truffle/codec/basic";
-import * as Bytes from "@truffle/codec/bytes";
-import * as Memory from "@truffle/codec/memory";
-import * as Storage from "@truffle/codec/storage";
-import * as Pointer from "@truffle/codec/pointer";
-import { DecoderRequest } from "@truffle/codec/types";
-import * as Evm from "@truffle/codec/evm";
-import { DecodingError } from "@truffle/codec/errors";
+import * as AbiData from "@dune-network/codec/abi-data";
+import * as Conversion from "@dune-network/codec/conversion";
+import * as Format from "@dune-network/codec/format";
+import read from "@dune-network/codec/read";
+import * as Basic from "@dune-network/codec/basic";
+import * as Bytes from "@dune-network/codec/bytes";
+import * as Memory from "@dune-network/codec/memory";
+import * as Storage from "@dune-network/codec/storage";
+import * as Pointer from "@dune-network/codec/pointer";
+import { DecoderRequest } from "@dune-network/codec/types";
+import * as Evm from "@dune-network/codec/evm";
+import { DecodingError } from "@dune-network/codec/errors";
 
 export function* decodeStack(
   dataType: Format.Types.Type,

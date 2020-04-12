@@ -1,5 +1,5 @@
 import "source-map-support/register";
-import Schema from "@truffle/contract-schema";
+import Schema from "@dune-network/contract-schema";
 import fse from "fs-extra";
 import path from "path";
 import { writeArtifact, finalizeArtifact } from "./utils";

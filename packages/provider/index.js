@@ -1,7 +1,7 @@
 const debug = require("debug")("provider");
 const Web3 = require("web3");
 const parseUrl = require("url-parse");
-const { createInterfaceAdapter } = require("@truffle/interface-adapter");
+const { createInterfaceAdapter } = require("@dune-network/interface-adapter");
 const wrapper = require("./wrapper");
 const DEFAULT_NETWORK_CHECK_TIMEOUT = 10000;
 

@@ -19,9 +19,9 @@ const command = {
     ]
   },
   run: function(options, done) {
-    const Config = require("@truffle/config");
+    const Config = require("@dune-network/config");
     const Console = require("../console");
-    const { Environment } = require("@truffle/environment");
+    const { Environment } = require("@dune-network/environment");
 
     const config = Config.detect(options);
 

@@ -1,5 +1,5 @@
 // Override artifactor
-const Config = require("@truffle/config");
+const Config = require("@dune-network/config");
 const { assert } = require("chai");
 const temp = require("temp").track();
 const contract = require("../");
@@ -8,7 +8,7 @@ const debug = require("debug")("ganache-core");
 const Ganache = require("ganache-core");
 const path = require("path");
 const fs = require("fs");
-const Compile = require("@truffle/compile-solidity/legacy");
+const Compile = require("@dune-network/compile-solidity/legacy");
 const { promisify } = require("util");
 
 // Clean up after solidity. Only remove solidity's listener,

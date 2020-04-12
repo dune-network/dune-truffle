@@ -2,16 +2,16 @@ import debugModule from "debug";
 const debug = debugModule("codec:abi-data:decode");
 
 import BN from "bn.js";
-import read from "@truffle/codec/read";
-import * as Conversion from "@truffle/codec/conversion";
-import * as Basic from "@truffle/codec/basic";
-import * as Bytes from "@truffle/codec/bytes";
-import * as Format from "@truffle/codec/format";
-import * as Pointer from "@truffle/codec/pointer";
-import { DecoderRequest, DecoderOptions } from "@truffle/codec/types";
-import * as Evm from "@truffle/codec/evm";
-import { abiSizeInfo } from "@truffle/codec/abi-data/allocate";
-import { DecodingError, StopDecodingError } from "@truffle/codec/errors";
+import read from "@dune-network/codec/read";
+import * as Conversion from "@dune-network/codec/conversion";
+import * as Basic from "@dune-network/codec/basic";
+import * as Bytes from "@dune-network/codec/bytes";
+import * as Format from "@dune-network/codec/format";
+import * as Pointer from "@dune-network/codec/pointer";
+import { DecoderRequest, DecoderOptions } from "@dune-network/codec/types";
+import * as Evm from "@dune-network/codec/evm";
+import { abiSizeInfo } from "@dune-network/codec/abi-data/allocate";
+import { DecodingError, StopDecodingError } from "@dune-network/codec/errors";
 
 type AbiLocation = "calldata" | "eventdata" | "returndata"; //leaving out "abi" as it shouldn't occur here
 

@@ -1,6 +1,6 @@
 const pkg = require("../package.json");
-const { CompilerSupplier } = require("@truffle/compile-solidity");
-const Config = require("@truffle/config");
+const { CompilerSupplier } = require("@dune-network/compile-solidity");
+const Config = require("@dune-network/config");
 
 const info = config => {
   let bundleVersion;

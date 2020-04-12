@@ -1,5 +1,5 @@
-import * as Ast from "@truffle/codec/ast";
-import * as Storage from "@truffle/codec/storage/types";
+import * as Ast from "@dune-network/codec/ast";
+import * as Storage from "@dune-network/codec/storage/types";
 
 export type DataPointer =
   | StackFormPointer

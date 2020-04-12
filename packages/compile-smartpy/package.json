@@ -1,5 +1,5 @@
 {
-  "name": "@truffle/compile-smartpy",
+  "name": "@dune-network/compile-smartpy",
   "version": "0.1.1-tezos.1",
   "description": "SmartPy compiler interface for truffle",
   "author": "CruzMolina <7537712+CruzMolina@users.noreply.github.com>",
@@ -21,17 +21,17 @@
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
   "dependencies": {
-    "@truffle/compile-solidity": "^4.3.0-tezos.0",
-    "@truffle/contract-sources": "^0.3.0-tezos.0",
+    "@dune-network/compile-solidity": "^4.3.0-tezos.0",
+    "@dune-network/contract-sources": "^0.3.0-tezos.0",
     "colors": "^1.4.0",
     "minimatch": "^3.0.4",
     "mkdirp": "0.5.1"
   },
   "devDependencies": {
-    "@truffle/config": "^1.4.0-tezos.1",
+    "@dune-network/config": "^1.4.0-tezos.1",
     "mocha": "5.2.0"
   }
 }

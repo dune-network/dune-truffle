@@ -2,10 +2,10 @@ const assert = require("chai").assert;
 const path = require("path");
 const fse = require("fs-extra");
 const glob = require("glob");
-const Box = require("@truffle/box");
+const Box = require("@dune-network/box");
 const Create = require("../../lib/commands/create/helpers");
-const Resolver = require("@truffle/resolver");
-const Artifactor = require("@truffle/artifactor");
+const Resolver = require("@dune-network/resolver");
+const Artifactor = require("@dune-network/artifactor");
 
 describe("create", function() {
   let config;

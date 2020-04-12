@@ -44,9 +44,9 @@ scope of changes and the wonder at the possibilities ahead.
 These release notes seek to cover the changes as completely as possible, but if
 you're looking for historical information, it may be helpful to refer to
 the release notes from the betas:
-- [v5.0.0-beta.0 – Chocolate Sushi :sushi:](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0-beta.0)
-- [v5.0.0-beta.1 – Hazelnut Onigiri :rice_ball:](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0-beta.1)
-- [v5.0.0-beta.2 – Bento Box of Candy :bento:](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0-beta.2)
+- [v5.0.0-beta.0 – Chocolate Sushi :sushi:](https://github.com/dune-network/truffle/releases/tag/v5.0.0-beta.0)
+- [v5.0.0-beta.1 – Hazelnut Onigiri :rice_ball:](https://github.com/dune-network/truffle/releases/tag/v5.0.0-beta.1)
+- [v5.0.0-beta.2 – Bento Box of Candy :bento:](https://github.com/dune-network/truffle/releases/tag/v5.0.0-beta.2)
 
 Anyway, keep scrolling if you're looking for the [table of contents](#user-content-contents),
 or first read about some highlights. :high_brightness:

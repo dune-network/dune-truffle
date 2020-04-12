@@ -1,12 +1,12 @@
 {
-  "name": "@truffle/resolver",
+  "name": "@dune-network/resolver",
   "version": "5.2.0-tezos.4",
   "description": "Resolve contract dependencies given multiple configurable dependency sources",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "repository": "https://github.com/trufflesuite/truffle/tree/master/packages/resolver",
+  "repository": "https://github.com/dune-network/truffle/tree/master/packages/resolver",
   "keywords": [
     "ethereum",
     "truffle",
@@ -16,13 +16,13 @@
   "author": "Tim Coulter <tim@trufflesuite.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle/issues"
+    "url": "https://github.com/dune-network/truffle/issues"
   },
-  "homepage": "https://github.com/trufflesuite/truffle/tree/master/packages/resolver#readme",
+  "homepage": "https://github.com/dune-network/truffle/tree/master/packages/resolver#readme",
   "dependencies": {
-    "@truffle/contract": "^4.3.0-tezos.1",
-    "@truffle/expect": "^0.1.0-tezos.0",
-    "@truffle/provisioner": "^0.3.0-tezos.0",
+    "@dune-network/contract": "^4.3.0-tezos.1",
+    "@dune-network/expect": "^0.1.0-tezos.0",
+    "@dune-network/provisioner": "^0.3.0-tezos.0",
     "debug": "^4.1.1",
     "detect-installed": "^2.0.4",
     "get-installed-path": "^4.0.8",
@@ -34,7 +34,7 @@
     "sinon": "^7.3.1"
   },
   "peerDependencies": {
-    "@truffle/contract": "^4.0.13"
+    "@dune-network/contract": "^4.0.13"
   },
   "publishConfig": {
     "access": "public"

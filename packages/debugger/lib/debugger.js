@@ -13,7 +13,7 @@ import soliditySelector from "./solidity/selectors";
 import sessionSelector from "./session/selectors";
 import controllerSelector from "./controller/selectors";
 
-import { Compilations } from "@truffle/codec";
+import { Compilations } from "@dune-network/codec";
 
 /**
  * @example

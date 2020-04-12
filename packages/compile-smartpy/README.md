@@ -1,2 +1,2 @@
-# @truffle/compile-smartpy
+# @dune-network/compile-smartpy
 SmartPy compiler interface for truffle.

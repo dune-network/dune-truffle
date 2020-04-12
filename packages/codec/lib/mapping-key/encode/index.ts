@@ -1,11 +1,11 @@
 import debugModule from "debug";
 const debug = debugModule("codec:mapping-key:encode");
 
-import * as Format from "@truffle/codec/format";
-import * as Conversion from "@truffle/codec/conversion";
-import * as Evm from "@truffle/codec/evm";
-import * as BasicEncode from "@truffle/codec/basic/encode";
-import * as BytesEncode from "@truffle/codec/bytes/encode";
+import * as Format from "@dune-network/codec/format";
+import * as Conversion from "@dune-network/codec/conversion";
+import * as Evm from "@dune-network/codec/evm";
+import * as BasicEncode from "@dune-network/codec/basic/encode";
+import * as BytesEncode from "@dune-network/codec/bytes/encode";
 
 //UGH -- it turns out TypeScript can't handle nested tagged unions
 //see: https://github.com/microsoft/TypeScript/issues/18758

@@ -1,7 +1,7 @@
 import debugModule from "debug";
 const debug = debugModule("decoder:decoders");
 
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 import {
   AbiData,
   Ast,
@@ -19,11 +19,11 @@ import {
   decodeCalldata,
   decodeEvent,
   decodeReturndata
-} from "@truffle/codec";
+} from "@dune-network/codec";
 import * as Utils from "./utils";
 import * as DecoderTypes from "./types";
 import Web3 from "web3";
-import { ContractObject as Artifact } from "@truffle/contract-schema/spec";
+import { ContractObject as Artifact } from "@dune-network/contract-schema/spec";
 import BN from "bn.js";
 import { Provider } from "web3/providers";
 import {
@@ -34,8 +34,8 @@ import {
   VariableNotFoundError
 } from "./errors";
 //sorry for the untyped imports, but...
-const { shimBytecode } = require("@truffle/compile-solidity/legacy/shims");
-const SolidityUtils = require("@truffle/solidity-utils");
+const { shimBytecode } = require("@dune-network/compile-solidity/legacy/shims");
+const SolidityUtils = require("@dune-network/solidity-utils");
 
 /**
  * The WireDecoder class.  Decodes transactions and logs.  See below for a method listing.
@@ -862,7 +862,7 @@ export class ContractDecoder {
    * Decoding creation calls with this method is not supported.  If you simply
    * want to decode a revert message from an arbitrary call that you know
    * failed, you may also want to see the [[decodeRevert]] function in
-   * `@truffle/codec`.
+   * `@dune-network/codec`.
    *
    * @param abi The abi entry for the function call whose return value is being decoded.
    * @param data The data to be decoded, as a hex string (beginning with "0x").

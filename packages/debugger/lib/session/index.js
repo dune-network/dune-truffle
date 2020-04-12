@@ -1,7 +1,7 @@
 import debugModule from "debug";
 const debug = debugModule("debugger:session");
 
-import * as Codec from "@truffle/codec";
+import * as Codec from "@dune-network/codec";
 
 import configureStore from "lib/store";
 
@@ -17,7 +17,7 @@ import controllerSelector from "lib/controller/selectors";
 import rootSaga from "./sagas";
 import reducer from "./reducers";
 
-import { shimBytecode } from "@truffle/compile-solidity/legacy/shims";
+import { shimBytecode } from "@dune-network/compile-solidity/legacy/shims";
 
 /**
  * Debugger Session

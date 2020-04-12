@@ -1,6 +1,6 @@
 # Truffle Codec
 
-This module, `@truffle/codec`, provides an interface for decoding Solidity
+This module, `@dune-network/codec`, provides an interface for decoding Solidity
 smart contract state as well as information sent to or from smart contracts
 using the Solidity ABI.  It produces output in a machine-readable form that
 avoids losing any information.  It also has some rudimentary encoding
@@ -15,7 +15,7 @@ possible that you may need to use this.
 ## Install
 
 ```
-$ npm install --save @truffle/codec
+$ npm install --save @dune-network/codec
 ```
 
 This module does not provide a CLI; it is entirely meant to be used as part
@@ -31,5 +31,5 @@ sparse at the moment.
 
 ## License
 
-As part of the larger [Truffle Suite](https://github.com/trufflesuite/truffle/),
+As part of the larger [Truffle Suite](https://github.com/dune-network/truffle/),
 this module is MIT-licensed.
