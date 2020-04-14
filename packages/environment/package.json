@@ -9,14 +9,14 @@
   "bugs": {
     "url": "https://github.com/dune-network/truffle/issues"
   },
-  "version": "0.2.2-dune.1",
+  "version": "0.2.2-dune.2",
   "main": "index.js",
   "dependencies": {
-    "@dune-network/artifactor": "^4.2.0-dune.1",
-    "@dune-network/error": "^0.1.0-dune.0",
-    "@dune-network/expect": "^0.1.0-dune.0",
-    "@dune-network/interface-adapter": "^0.5.0-dune.4",
-    "@dune-network/resolver": "^5.2.0-dune.4",
+    "@dune-network/artifactor": "^4.2.0-dune.2",
+    "@dune-network/error": "^0.1.0-dune.1",
+    "@dune-network/expect": "^0.1.0-dune.1",
+    "@dune-network/interface-adapter": "^0.5.0-dune.5",
+    "@dune-network/resolver": "^5.2.0-dune.5",
     "ganache-core": "2.10.2",
     "node-ipc": "^9.1.1",
     "source-map-support": "^0.5.16",

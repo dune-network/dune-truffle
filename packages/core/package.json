@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/dune-network/truffle/issues"
   },
-  "version": "5.3.0-dune.1",
+  "version": "5.3.0-dune.2",
   "bin": {
     "truffle": "./cli.js",
     "truffle-exec": "./exec.js"
@@ -16,27 +16,27 @@
     "test": "mocha ./test/** ./test/**/*"
   },
   "dependencies": {
-    "@dune-network/artifactor": "^4.2.0-dune.1",
-    "@dune-network/box": "^1.1.0-dune.1",
-    "@dune-network/codec": "^0.4.5-dune.0",
-    "@dune-network/compile-solidity": "^4.3.0-dune.0",
-    "@dune-network/config": "^1.4.0-dune.1",
-    "@dune-network/contract": "^4.3.0-dune.1",
-    "@dune-network/contract-sources": "^0.3.0-dune.0",
-    "@dune-network/debug-utils": "^4.0.3-dune.0",
-    "@dune-network/debugger": "^7.0.5-dune.1",
-    "@dune-network/decoder": "^4.2.2-dune.1",
-    "@dune-network/deployer": "^3.2.0-dune.4",
-    "@dune-network/environment": "^0.2.2-dune.1",
-    "@dune-network/error": "^0.1.0-dune.0",
-    "@dune-network/expect": "^0.1.0-dune.0",
-    "@dune-network/interface-adapter": "^0.5.0-dune.4",
-    "@dune-network/migrate": "^3.4.0-dune.0",
-    "@dune-network/provider": "^0.3.0-dune.4",
-    "@dune-network/provisioner": "^0.3.0-dune.0",
-    "@dune-network/require": "^2.1.0-dune.1",
-    "@dune-network/resolver": "^5.2.0-dune.4",
-    "@dune-network/workflow-compile": "^2.3.0-dune.1",
+    "@dune-network/artifactor": "^4.2.0-dune.2",
+    "@dune-network/box": "^1.1.0-dune.2",
+    "@dune-network/codec": "^0.4.5-dune.1",
+    "@dune-network/compile-solidity": "^4.3.0-dune.1",
+    "@dune-network/config": "^1.4.0-dune.2",
+    "@dune-network/contract": "^4.3.0-dune.2",
+    "@dune-network/contract-sources": "^0.3.0-dune.1",
+    "@dune-network/debug-utils": "^4.0.3-dune.1",
+    "@dune-network/debugger": "^7.0.5-dune.2",
+    "@dune-network/decoder": "^4.2.2-dune.2",
+    "@dune-network/deployer": "^3.2.0-dune.5",
+    "@dune-network/environment": "^0.2.2-dune.2",
+    "@dune-network/error": "^0.1.0-dune.1",
+    "@dune-network/expect": "^0.1.0-dune.1",
+    "@dune-network/interface-adapter": "^0.5.0-dune.5",
+    "@dune-network/migrate": "^3.4.0-dune.1",
+    "@dune-network/provider": "^0.3.0-dune.5",
+    "@dune-network/provisioner": "^0.3.0-dune.1",
+    "@dune-network/require": "^2.1.0-dune.2",
+    "@dune-network/resolver": "^5.2.0-dune.5",
+    "@dune-network/workflow-compile": "^2.3.0-dune.2",
     "app-module-path": "^2.2.0",
     "async": "2.6.1",
     "bip39": "^2.2.0",
@@ -72,7 +72,7 @@
     "yargs": "^8.0.2"
   },
   "devDependencies": {
-    "@dune-network/blockchain-utils": "^0.1.0-dune.1",
+    "@dune-network/blockchain-utils": "^0.1.0-dune.2",
     "memorystream": "^0.3.1"
   },
   "publishConfig": {

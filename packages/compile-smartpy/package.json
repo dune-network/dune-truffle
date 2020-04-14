@@ -1,6 +1,6 @@
 {
   "name": "@dune-network/compile-smartpy",
-  "version": "0.1.1-dune.1",
+  "version": "0.1.1-dune.2",
   "description": "SmartPy compiler interface for truffle",
   "author": "CruzMolina <7537712+CruzMolina@users.noreply.github.com>",
   "homepage": "https://github.com/trufflesuite/truffle#readme",
@@ -24,14 +24,14 @@
     "url": "https://github.com/dune-network/truffle/issues"
   },
   "dependencies": {
-    "@dune-network/compile-solidity": "^4.3.0-dune.0",
-    "@dune-network/contract-sources": "^0.3.0-dune.0",
+    "@dune-network/compile-solidity": "^4.3.0-dune.1",
+    "@dune-network/contract-sources": "^0.3.0-dune.1",
     "colors": "^1.4.0",
     "minimatch": "^3.0.4",
     "mkdirp": "0.5.1"
   },
   "devDependencies": {
-    "@dune-network/config": "^1.4.0-dune.1",
+    "@dune-network/config": "^1.4.0-dune.2",
     "mocha": "5.2.0"
   }
 }

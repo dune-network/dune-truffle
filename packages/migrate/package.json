@@ -8,18 +8,18 @@
   "bugs": {
     "url": "https://github.com/dune-network/truffle/issues"
   },
-  "version": "3.4.0-dune.0",
+  "version": "3.4.0-dune.1",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/* ./test/**/*"
   },
   "dependencies": {
-    "@dune-network/config": "^1.4.0-dune.1",
-    "@dune-network/deployer": "^3.2.0-dune.4",
-    "@dune-network/expect": "^0.1.0-dune.0",
-    "@dune-network/interface-adapter": "^0.5.0-dune.4",
-    "@dune-network/reporters": "^1.1.0-dune.1",
-    "@dune-network/require": "^2.1.0-dune.1",
+    "@dune-network/config": "^1.4.0-dune.2",
+    "@dune-network/deployer": "^3.2.0-dune.5",
+    "@dune-network/expect": "^0.1.0-dune.1",
+    "@dune-network/interface-adapter": "^0.5.0-dune.5",
+    "@dune-network/reporters": "^1.1.0-dune.2",
+    "@dune-network/require": "^2.1.0-dune.2",
     "emittery": "^0.4.0",
     "glob": "^7.1.6",
     "web3": "1.2.1"

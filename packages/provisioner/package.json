@@ -1,6 +1,6 @@
 {
   "name": "@dune-network/provisioner",
-  "version": "0.3.0-dune.0",
+  "version": "0.3.0-dune.1",
   "description": "Provision contract objects for use from multiple sources",
   "main": "index.js",
   "scripts": {},

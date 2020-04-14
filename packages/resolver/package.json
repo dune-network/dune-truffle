@@ -1,6 +1,6 @@
 {
   "name": "@dune-network/resolver",
-  "version": "5.2.0-dune.4",
+  "version": "5.2.0-dune.5",
   "description": "Resolve contract dependencies given multiple configurable dependency sources",
   "main": "index.js",
   "scripts": {
@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/dune-network/truffle/tree/master/packages/resolver#readme",
   "dependencies": {
-    "@dune-network/contract": "^4.3.0-dune.1",
-    "@dune-network/expect": "^0.1.0-dune.0",
-    "@dune-network/provisioner": "^0.3.0-dune.0",
+    "@dune-network/contract": "^4.3.0-dune.2",
+    "@dune-network/expect": "^0.1.0-dune.1",
+    "@dune-network/provisioner": "^0.3.0-dune.1",
     "debug": "^4.1.1",
     "detect-installed": "^2.0.4",
     "get-installed-path": "^4.0.8",

@@ -1,13 +1,13 @@
 {
   "name": "@dune-network/compile-solidity",
   "description": "Compiler helper and artifact manager for Solidity files",
-  "version": "4.3.0-dune.0",
+  "version": "4.3.0-dune.1",
   "main": "index.js",
   "dependencies": {
-    "@dune-network/config": "^1.4.0-dune.1",
-    "@dune-network/contract-sources": "^0.3.0-dune.0",
-    "@dune-network/error": "^0.1.0-dune.0",
-    "@dune-network/expect": "^0.1.0-dune.0",
+    "@dune-network/config": "^1.4.0-dune.2",
+    "@dune-network/contract-sources": "^0.3.0-dune.1",
+    "@dune-network/error": "^0.1.0-dune.1",
+    "@dune-network/expect": "^0.1.0-dune.1",
     "colors": "^1.1.2",
     "debug": "^4.1.0",
     "fs-extra": "^8.1.0",
@@ -20,7 +20,7 @@
     "solc": "^0.6.0"
   },
   "devDependencies": {
-    "@dune-network/resolver": "^5.2.0-dune.4",
+    "@dune-network/resolver": "^5.2.0-dune.5",
     "babel-core": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",

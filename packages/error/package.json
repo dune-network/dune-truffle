@@ -1,6 +1,6 @@
 {
   "name": "@dune-network/error",
-  "version": "0.1.0-dune.0",
+  "version": "0.1.0-dune.1",
   "description": "Simple module that allows native Error objects to be extended",
   "main": "index.js",
   "scripts": {},
