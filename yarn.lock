@@ -114,14 +114,14 @@
 
 "@dune-network/code-utils@^1.2.14":
   version "1.2.14"
-  resolved "https://registry.yarnpkg.com/@truffle/code-utils/-/code-utils-1.2.14.tgz#3828953eebb7a845a174a7927d0938b792e080f4"
+  resolved "https://registry.yarnpkg.com/@dune-network/code-utils/-/code-utils-1.2.14.tgz#3828953eebb7a845a174a7927d0938b792e080f4"
   integrity sha512-TucOf6GqW/uE47rAnwT00fi0ltaeTPZ2NcQEwPVvf4X+0xeJ90hq3dr78JKzrxgPHOzyok2MYaB+qdkZWcrz/w==
   dependencies:
     source-map-support "^0.5.16"
 
 "@dune-network/compile-solidity@^4.2.27":
   version "4.2.27"
-  resolved "https://registry.yarnpkg.com/@truffle/compile-solidity/-/compile-solidity-4.2.27.tgz#3d028f14075e15d9db274b4e146eb1546fea96f3"
+  resolved "https://registry.yarnpkg.com/@dune-network/compile-solidity/-/compile-solidity-4.2.27.tgz#3d028f14075e15d9db274b4e146eb1546fea96f3"
   integrity sha512-Z9tuxQJY0Gh0HkyQ1vReACaMJzMe6Soop/KWPNM4zp4nVUEUiH6n77krCyYTSX1RpRqJNAZ+Iev4gwMwiBjyvg==
   dependencies:
     "@truffle/config" "^1.2.17"
@@ -139,47 +139,46 @@
     semver "^5.6.0"
     solc "^0.6.0"
 
-"@dune-network/http-utils@^6.2.1-beta.0":
-  version "6.2.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@dune-network/http-utils/-/http-utils-6.2.1-beta.0.tgz#97f8ea82daace89a390e691b75d76e7ac3407b9e"
-  integrity sha512-0XTuVBp5eF5wDQPBqQUR4zVjjL4tbhfyw7O2smq9w8J91ryLpsHuoGbTOVmZeSeG8upTy5toGGst4ttAHjeBjg==
+"@dune-network/http-utils@^6.2.1-beta.3":
+  version "6.2.1-beta.3"
+  resolved "https://registry.yarnpkg.com/@dune-network/http-utils/-/http-utils-6.2.1-beta.3.tgz#07f4119611b0618c10730535b6767e3570f459ec"
+  integrity sha512-case0LdO3szMz3Xr47fDR2DzPDmAni/ppD3EMZg54LTUYvk7BLumhDihuRpD9kcQ+11pIXu86KPiVfypgUoDwQ==
   dependencies:
     xhr2-cookies "^1.1.0"
 
-"@dune-network/michelson-encoder@^6.2.1-beta.0":
-  version "6.2.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@dune-network/michelson-encoder/-/michelson-encoder-6.2.1-beta.0.tgz#e7119e74f572cdb62fefc8e6785a03e541cfec88"
-  integrity sha512-O8tXKYdyadoGy67GIhvf6cMzGOPXkvNRUxmbY18czuIdpmfLiMY+f/T9PQloK66FY0Fqhp4BpGfuzZaTJrefdA==
+"@dune-network/michelson-encoder@^6.2.1-beta.3":
+  version "6.2.1-beta.3"
+  resolved "https://registry.yarnpkg.com/@dune-network/michelson-encoder/-/michelson-encoder-6.2.1-beta.3.tgz#6ca87c62c439fa868e812474a936cd989cf2cb70"
+  integrity sha512-6HBDLKs47mLEd6IXRhGwttttB4d2pZn3ROW2v+BzCN4DSyz18cBEXCPGFKRJg7iKkf2lGbRawycavtDcDubzjg==
   dependencies:
-    "@dune-network/utils" "^6.2.1-beta.0"
+    "@dune-network/utils" "^6.2.1-beta.3"
     bignumber.js "^9.0.0"
     fast-json-stable-stringify "^2.1.0"
 
-"@dune-network/provider@^0.2.9", "@truffle/provider@^0.2.9":
-  name "@dune-network/provider"
+"@dune-network/provider@^0.2.9":
   version "0.2.9"
-  resolved "https://registry.yarnpkg.com/@truffle/provider/-/provider-0.2.9.tgz#689941899d04fef50aad81ed6c74f89cb76482b3"
+  resolved "https://registry.yarnpkg.com/@dune-network/provider/-/provider-0.2.9.tgz#689941899d04fef50aad81ed6c74f89cb76482b3"
   integrity sha512-C83cXOjhpvzEhQJxd0hfjX9jW+IMS7P+vLlVuhi1SMK5wBQNvZIb8i6VPnhNBMJV9BHAQx2NlgDcWIFAVVf5Rw==
   dependencies:
     "@truffle/error" "^0.0.8"
     "@truffle/interface-adapter" "^0.4.6"
     web3 "1.2.1"
 
-"@dune-network/rpc@^6.2.1-beta.0":
-  version "6.2.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@dune-network/rpc/-/rpc-6.2.1-beta.0.tgz#3500d2d3ee3b15cbc71fca750aa884e960593121"
-  integrity sha512-+65by0q9a7IZa6ZpJv3AxGPpA3vtLngv/O9b6ZdVJvyLFApJo9lUiUuobt/L499lcnJyuVN4j9vflLfYipy0Yw==
+"@dune-network/rpc@^6.2.1-beta.3":
+  version "6.2.1-beta.3"
+  resolved "https://registry.yarnpkg.com/@dune-network/rpc/-/rpc-6.2.1-beta.3.tgz#9edff26e2305bd5fc5fd8231ad8b1a1f86696598"
+  integrity sha512-bLBqXxQG/MSyuImfCpocfY5mGrUQ1id3kXfIjyfWnGq1GoXacUn2ZnqJEweGCmNMiR28GODaRYg781XELyQqHQ==
   dependencies:
-    "@dune-network/http-utils" "^6.2.1-beta.0"
+    "@dune-network/http-utils" "^6.2.1-beta.3"
     bignumber.js "^9.0.0"
     lodash "^4.17.15"
 
-"@dune-network/signer@^6.2.1-beta.0":
-  version "6.2.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@dune-network/signer/-/signer-6.2.1-beta.0.tgz#dfd2a182132992d40fac764bf6ddf51f6ab3b3e9"
-  integrity sha512-2YiHvPwDSWF/r0b6QBI90zICWbJd2oinSSqqFQKb6iTQiTX44JG40rWdxeC2oYwuilU9xpeUTuAudP5lvm3MTg==
+"@dune-network/signer@^6.2.1-beta.3":
+  version "6.2.1-beta.3"
+  resolved "https://registry.yarnpkg.com/@dune-network/signer/-/signer-6.2.1-beta.3.tgz#6a8d083a3d2847b8ed8b9b1befbf89d15bdc2fae"
+  integrity sha512-ADZZqSLg1KwG5nF//bECdqajyDEsg1l1E0VgByTGFE0COKay8ZtDBeHOxYmGlpfoAeAqgsJ2x4iMI5aWdK3DPg==
   dependencies:
-    "@dune-network/utils" "^6.2.1-beta.0"
+    "@dune-network/utils" "^6.2.1-beta.3"
     bignumber.js "^9.0.0"
     bip39 "^3.0.2"
     elliptic "^6.5.1"
@@ -187,23 +186,23 @@
     pbkdf2 "^3.0.17"
     typedarray-to-buffer "^3.1.5"
 
-"@dune-network/taquito@6.2.1-beta.1":
-  version "6.2.1-beta.1"
-  resolved "https://registry.yarnpkg.com/@dune-network/taquito/-/taquito-6.2.1-beta.1.tgz#d2ecdddbc5d17acce5768a30a0d81d7cefee8239"
-  integrity sha512-No3v6HbuUKuI9VvW2eGirqp0iEHBugQnD9gIEdH5ASyIgN5Xm4MQ4Q1qH8f+ykGS3NHIggZWRf1UCB5KJdWNvA==
+"@dune-network/taquito@6.2.1-beta.3":
+  version "6.2.1-beta.3"
+  resolved "https://registry.yarnpkg.com/@dune-network/taquito/-/taquito-6.2.1-beta.3.tgz#e364532e0b14ad44ea6550f4c583db6d1a3248ed"
+  integrity sha512-AMXeiDtj/QiFzsf6FZXvVTnWyL0Rkr15wVUmOlB7Yfb8wQvNJA3vXFQ5kr/L/co022Ze2P2YvRGaGHn2E0bpTw==
   dependencies:
-    "@dune-network/http-utils" "^6.2.1-beta.0"
-    "@dune-network/michelson-encoder" "^6.2.1-beta.0"
-    "@dune-network/rpc" "^6.2.1-beta.0"
-    "@dune-network/signer" "^6.2.1-beta.0"
-    "@dune-network/utils" "^6.2.1-beta.0"
+    "@dune-network/http-utils" "^6.2.1-beta.3"
+    "@dune-network/michelson-encoder" "^6.2.1-beta.3"
+    "@dune-network/rpc" "^6.2.1-beta.3"
+    "@dune-network/signer" "^6.2.1-beta.3"
+    "@dune-network/utils" "^6.2.1-beta.3"
     bignumber.js "^9.0.0"
     rxjs "^6.5.3"
 
-"@dune-network/utils@^6.2.1-beta.0":
-  version "6.2.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@dune-network/utils/-/utils-6.2.1-beta.0.tgz#71741b75aabbe494e01ac8e7e60ee7d434998240"
-  integrity sha512-Sn0cGgi9aI320l2epiEUq7nHPmIhyNh2oEJ5ko5FZSEDu1ZiorLDTPHMSHCCrsyaMTLZIQqs53NZU7sPKec9Xg==
+"@dune-network/utils@^6.2.1-beta.3":
+  version "6.2.1-beta.3"
+  resolved "https://registry.yarnpkg.com/@dune-network/utils/-/utils-6.2.1-beta.3.tgz#12b8d56ce6d51ea41a4cd168d5a60fcd104a2e35"
+  integrity sha512-ZBtveK6UZkHnQM+LRiOyyxz67G/r6hvOsEtATA6IGNkbE2CE/4BnzFwbEquEcxQb6or0bRN8+xu0Rsj7soankA==
   dependencies:
     blakejs "^1.1.0"
     bs58check "^2.1.2"
@@ -1177,28 +1176,12 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@taquito/http-utils@^6.1.1-beta.0":
-  version "6.1.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@taquito/http-utils/-/http-utils-6.1.1-beta.0.tgz#e86643b77708eb9194505e64b87da0160d80e21b"
-  integrity sha512-pdRXDWvDqrMGNOlE4+rRqQzhRy7CW6HNY36yb7D1lUcYGhYO3zqXxq1jD1y+Vsp3fnIDofwILC0LwrZP7Do2pA==
-  dependencies:
-    xhr2-cookies "^1.1.0"
-
 "@taquito/http-utils@^6.2.0-beta.0":
   version "6.2.0-beta.0"
   resolved "https://registry.yarnpkg.com/@taquito/http-utils/-/http-utils-6.2.0-beta.0.tgz#e2b20caeda4bff7f85b0af735b310fb299044cd3"
   integrity sha512-n3JViYTgCXXWVh6FT1wujAD7ctGEtuAIAPbUGCXOhJWUNyLYDFDcV8F1MDb9G4a+pp6pnvgBguCZxRdPa0z0uQ==
   dependencies:
     xhr2-cookies "^1.1.0"
-
-"@taquito/michelson-encoder@^6.1.1-beta.0":
-  version "6.1.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@taquito/michelson-encoder/-/michelson-encoder-6.1.1-beta.0.tgz#b28be5e838c7c0b38db30c88c309f33aaa810622"
-  integrity sha512-3/8+GYgiie72xrbF4539j63z/8O2Q9d0AANLW8D0Hs+f97uiZ48NcnZfGXulfkPwkOS9cs2OLww4AOPSzM6SlA==
-  dependencies:
-    "@taquito/utils" "^6.1.1-beta.0"
-    bignumber.js "^9.0.0"
-    fast-json-stable-stringify "^2.1.0"
 
 "@taquito/michelson-encoder@^6.2.0-beta.0":
   version "6.2.0-beta.0"
@@ -1209,15 +1192,6 @@
     bignumber.js "^9.0.0"
     fast-json-stable-stringify "^2.1.0"
 
-"@taquito/rpc@^6.1.1-beta.0":
-  version "6.1.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@taquito/rpc/-/rpc-6.1.1-beta.0.tgz#0774a26541d6934813fa97e60b10dcd3f849bfcd"
-  integrity sha512-5BBYPbWPjdwFYfmHfT4TSTugHgxiHb3lRzV4G+ljXhqcEOk8uVmV6HBoVFD3kBVP5YjiHunf4mOflr5Jioqq4w==
-  dependencies:
-    "@taquito/http-utils" "^6.1.1-beta.0"
-    bignumber.js "^9.0.0"
-    lodash "^4.17.15"
-
 "@taquito/rpc@^6.2.0-beta.0":
   version "6.2.0-beta.0"
   resolved "https://registry.yarnpkg.com/@taquito/rpc/-/rpc-6.2.0-beta.0.tgz#a722c99af3f90151cdcd16418c781466c0df66a6"
@@ -1226,19 +1200,6 @@
     "@taquito/http-utils" "^6.2.0-beta.0"
     bignumber.js "^9.0.0"
     lodash "^4.17.15"
-
-"@taquito/signer@^6.1.1-beta.0":
-  version "6.1.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@taquito/signer/-/signer-6.1.1-beta.0.tgz#60f84d9dc9e6ed2376bda4ae08416282f0e3f6f7"
-  integrity sha512-sIvcnXeQP5osBPyW0cPRchx74CgcprXRjKt10dy2j0ugwwwOIRYhuHeG4koVn0uqIbH5SdaFjYy0twZpgC5hLg==
-  dependencies:
-    "@taquito/utils" "^6.1.1-beta.0"
-    bignumber.js "^9.0.0"
-    bip39 "^3.0.2"
-    elliptic "^6.5.1"
-    libsodium-wrappers "^0.7.5"
-    pbkdf2 "^3.0.17"
-    typedarray-to-buffer "^3.1.5"
 
 "@taquito/signer@^6.2.0-beta.0":
   version "6.2.0-beta.0"
@@ -1253,18 +1214,6 @@
     pbkdf2 "^3.0.17"
     typedarray-to-buffer "^3.1.5"
 
-"@taquito/taquito@6.1.1-beta.0":
-  version "6.1.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@taquito/taquito/-/taquito-6.1.1-beta.0.tgz#cebc30bc051629c8cf3fc1be8f789b1800f0f2a0"
-  integrity sha512-LmJOVutuTi/yYu6Bp5ZtQIZhrStqKWnpATciqIy1TmgJMOu9KxVgMGeL4jOM1cZ9TgbZWM1e6WVuPbEBblCi6w==
-  dependencies:
-    "@taquito/michelson-encoder" "^6.1.1-beta.0"
-    "@taquito/rpc" "^6.1.1-beta.0"
-    "@taquito/signer" "^6.1.1-beta.0"
-    "@taquito/utils" "^6.1.1-beta.0"
-    bignumber.js "^9.0.0"
-    rxjs "^6.5.3"
-
 "@taquito/taquito@6.2.0-beta.0":
   version "6.2.0-beta.0"
   resolved "https://registry.yarnpkg.com/@taquito/taquito/-/taquito-6.2.0-beta.0.tgz#fc415c867ded54d57086e39601ab4bd302e3af69"
@@ -1277,15 +1226,6 @@
     "@taquito/utils" "^6.2.0-beta.0"
     bignumber.js "^9.0.0"
     rxjs "^6.5.3"
-
-"@taquito/utils@^6.1.1-beta.0":
-  version "6.1.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@taquito/utils/-/utils-6.1.1-beta.0.tgz#f31d46f69f5e36c436e899add2fc0350b1cc166b"
-  integrity sha512-w3IS0AKVIi59hLEIPnsSEz2ulChobTK7XuS+p/bae4jRvCAnZp/8IzWcUH0Xmiu/NE32vxbvT0IOhxo+a9Z9Kg==
-  dependencies:
-    blakejs "^1.1.0"
-    bs58check "^2.1.2"
-    buffer "^5.2.1"
 
 "@taquito/utils@^6.2.0-beta.0":
   version "6.2.0-beta.0"
@@ -1346,6 +1286,15 @@
     bn.js "^4.11.8"
     ethers "^4.0.32"
     source-map-support "^0.5.16"
+    web3 "1.2.1"
+
+"@truffle/provider@^0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@truffle/provider/-/provider-0.2.9.tgz#689941899d04fef50aad81ed6c74f89cb76482b3"
+  integrity sha512-C83cXOjhpvzEhQJxd0hfjX9jW+IMS7P+vLlVuhi1SMK5wBQNvZIb8i6VPnhNBMJV9BHAQx2NlgDcWIFAVVf5Rw==
+  dependencies:
+    "@truffle/error" "^0.0.8"
+    "@truffle/interface-adapter" "^0.4.6"
     web3 "1.2.1"
 
 "@trufflesuite/chromafi@^2.1.2":
