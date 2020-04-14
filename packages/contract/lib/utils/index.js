@@ -191,6 +191,20 @@ const Utils = {
     return Utils.merge(constructor.class_defaults, tx_params);
   },
 
+  // Extracts optional Dune tx params from a list of fn arguments
+  getDuneTxParams(args) {
+    const constructor = this;
+
+    let tx_params = {};
+    const last_arg = args[args.length - 1];
+
+    if (Utils.is_tx_params(last_arg)) {
+      tx_params = args.pop();
+    }
+
+    return Utils.merge(constructor.class_defaults, tx_params);
+  },
+
   // Verifies that a contracts libraries have been linked correctly.
   // Throws on error
   checkLibraries() {

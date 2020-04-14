@@ -115,7 +115,8 @@ const Require = {
         file: options.file,
         context: {
           web3: interfaceAdapter.web3 ? interfaceAdapter.web3 : undefined,
-          tezos: interfaceAdapter.tezos ? interfaceAdapter.tezos : undefined
+          tezos: interfaceAdapter.tezos ? interfaceAdapter.tezos : undefined,
+          dune: interfaceAdapter.dune ? interfaceAdapter.dune : undefined
         },
         resolver: options.resolver
       });

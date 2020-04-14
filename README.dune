@@ -1,0 +1,109 @@
+
+
+
+
+Development Notes
+=================
+
+Last merge of branch develop:
+commit 04a86e5a0a29e12dd59b62fa94c24c28cd59ce59
+Merge: alphaTez:c9ffa5714 develop:7d70b88de
+
+TODO:
+* replace @truffle/ by @dune-network/
+  replace github.com/trufflesuite/ by github.com/dune-network/ 
+* add Dune Mainnet in packages/core/lib/networks.js
+* add a love-compiler
+* add a michelson-compiler
+* duplicate packages/interface-adapter/lib/adapter/tezos/ into dune/
+* modify packages/interface-adapter/lib/adapter/index.ts for a DuneAdapter
+
+* search for deployTezos => deployDune
+  in execute.js: deployTezos, sendTezos, prepareTezosCall
+
+Some code to understand what to do.
+
+in ligo-compiler:
+
++    "docker run --rm -i ligolang/ligo:next --help",
+
+
++// Execute ligo for single source file
++function execLigo(sourcePath, entryPoint, callback) {
++  // Note that the first volume parameter passed to docker needs to have a path
++  // denoted in the format of of the host filesystem. The latter volume parameter,
++  // as well as the entry point, needs to be denoted in the format of the VM.
++  // Because of this, we rewrite the VM paths relative to a mounted volume called "project".
++
++  // In order to make this work on all platforms, we first normalize every host path
++  // (working directory, and source path). We then construct a VM internal sourch path,
++  // using normalized working directory and source path. From there, we know this constructed
++  // internal source path won't contain any "gotcha's", such as double-escaped path separators,
++  // etc. From there, we replace all backslashes with forward slashes, which is the path
++  // separator expected within the internal source.
++  let currentWorkingDirectory = path.normalize(process.cwd());
++  sourcePath = path.normalize(sourcePath);
++
++  let fullInternalSourcePath = path
++    .normalize("/project" + sourcePath.replace(currentWorkingDirectory, ""))
++    .replace(/\\/g, "/");
++
++  // Use spawn() instead of exec() here so that the OS can take care of escaping args.
++  let docker = spawn("docker", [
++    "run",
++    "-v",
++    currentWorkingDirectory + ":/project",
++    "--rm",
++    "-i",
++    "ligolang/ligo:next",
++    "compile-contract",
++    "--michelson-format=json",
++    fullInternalSourcePath,
++    entryPoint
++  ]);
++
+
+in smartpy-compiler:
+
++    "docker run --rm -i trufflesuite/smartpy-basic:0.0.1 --help",
+
++    let docker = spawn("docker", [
++      "run",
++      "-v",
++      `${currentProjectWorkingDirectory}:${currentProjectWorkingDirectory}`,
++      "-w",
++      `${currentProjectWorkingDirectory}`,
++      "--rm",
++      "-i",
++      "trufflesuite/smartpy-basic:0.0.1",
++      "compile",
++      fullInternalSourcePath,
++      `${entryPoint ? entryPoint : contractName}()`,
++      options.contracts_build_directory
++    ]);
+
+
+In --- a/packages/workflow-compile/legacy/index.js
++const ligoCompile = require("@dune-network/compile-ligo");
++const smartpyCompile = require("@dune-network/compile-smartpy");
+ const SUPPORTED_COMPILERS = {
+   solc: solcCompile,
+   vyper: vyperCompile,
++  ligo: ligoCompile,
++  smartpy: smartpyCompile,
+   external: externalCompile
+ };
++++ b/packages/workflow-compile/new/index.js
+@@ -17,6 +17,14 @@ const SUPPORTED_COMPILERS = {
+     compiler: require("@dune-network/compile-vyper"),
+     legacy: true
+   },
++  ligo: {
++    compiler: require("@dune-network/compile-ligo"),
++    legacy: true
++  },
++  smartpy: {
++    compiler: require("@dune-network/compile-smartpy"),
++    legacy: true
++  },
+

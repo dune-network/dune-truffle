@@ -241,7 +241,7 @@ const execute = {
 
       execute
         .prepareTezosCall(constructor, arguments)
-        .then(async ({ args, params, network }) => {
+        .then(async ({ args, params, _network }) => {
           const context = {
             contract: constructor, // Can't name this field `constructor` or `_constructor`
             promiEvent,
@@ -398,8 +398,8 @@ const execute = {
 
       execute
         .prepareTezosCall(constructor, arguments)
-        .then(async ({ args, params, network }) => {
-          const { blockLimit } = network;
+        .then(async ({ args, params, _network }) => {
+          // const { blockLimit } = network;
 
           // Promievent and flag that allows instance to resolve (rather than just receipt)
           const context = {
@@ -466,6 +466,182 @@ const execute = {
       return promiEvent.eventEmitter;
     };
   },
+
+  // begin DUNE
+
+  /**
+   * Prepares simple wrapped calls by checking network and organizing the method inputs into
+   * objects tezos can consume.
+   * @param  {Object} constructor   TruffleContract constructor
+   * @param  {Array}  _arguments    Arguments passed to method invocation
+   * @return {Promise}              Resolves object w/ tx params disambiguated from arguments
+   */
+  prepareDuneCall: async (constructor, _arguments) => {
+    let args = Array.prototype.slice.call(_arguments);
+    const params = utils.getDuneTxParams.call(constructor, args);
+
+    args = utils.convertToEthersBN(args);
+
+    const network = await constructor.detectNetwork();
+    return { args, params, network };
+  },
+
+  /**
+   * Executes Dune method as .send
+   * @param  {Function} fn         Method to invoke
+   * @param  {String}   address    Deployed address of the targeted instance
+   * @return {PromiEvent}          Resolves a transaction receipt (via the receipt handler)
+   */
+  sendDune: function(fn, address) {
+    const constructor = this;
+
+    return function() {
+      let deferred;
+      const promiEvent = PromiEvent();
+
+      execute
+        .prepareDuneCall(constructor, arguments)
+        .then(async ({ args, params, _network }) => {
+          const context = {
+            contract: constructor, // Can't name this field `constructor` or `_constructor`
+            promiEvent,
+            params
+          };
+
+          const methodCall = fn(...args);
+
+          promiEvent.eventEmitter.emit("execute:send:method", {
+            fn,
+            args,
+            address,
+            contract: constructor
+          });
+
+          /*
+          try {
+            params.gas = await execute.getGasEstimate.call(
+              constructor,
+              params,
+              network.blockLimit
+            );
+          } catch (error) {
+            promiEvent.reject(error);
+            return;
+          }
+          */
+
+          params = {
+            amount: params.amount || 0,
+            fee: params.fee,
+            gasLimit: params.gasLimit || params.gas
+          };
+
+          deferred = methodCall.send(params);
+
+          try {
+            const receipt = await deferred;
+            context.promiEvent.eventEmitter.emit("receipt", receipt);
+            context.promiEvent.eventEmitter.emit(
+              "transactionHash",
+              receipt.hash
+            );
+            await receipt.confirmation();
+            context.promiEvent.resolve({ tx: receipt.hash, receipt });
+          } catch (error) {
+            context.promiEvent.eventEmitter.emit("error", error);
+            throw error;
+          }
+        })
+        .catch(promiEvent.reject);
+
+      return promiEvent.eventEmitter;
+    };
+  },
+
+  /**
+   * Deploys a Dune instance
+   * @return {PromiEvent}             Resolves a TruffleContract instance
+   */
+  deployDune: function() {
+    const constructor = this;
+    const { dune } = this.interfaceAdapter;
+
+    return function() {
+      let deferred;
+      const promiEvent = PromiEvent();
+
+      execute
+        .prepareDuneCall(constructor, arguments)
+        .then(async ({ args, params, _network }) => {
+          // const { blockLimit } = network;
+
+          // Promievent and flag that allows instance to resolve (rather than just receipt)
+          const context = {
+            contract: constructor,
+            promiEvent,
+            onlyEmitReceipt: true
+          };
+
+          params.data = constructor.michelson;
+          params.arguments = args[0];
+
+          /*
+          params.gas = await execute.getGasEstimate.call(
+            constructor,
+            params,
+            blockLimit
+          );*/
+
+          context.params = params;
+
+          promiEvent.eventEmitter.emit("execute:deploy:method", {
+            args,
+            contract: constructor
+          });
+
+          const originateParams = {
+            balance: params.value || "0",
+            code: JSON.parse(params.data),
+            storage: params.arguments
+              ? params.arguments
+              : constructor.initialStorage
+                ? constructor.initialStorage
+                : `0`,
+            fee: params.fee,
+            storageLimit: params.storageLimit,
+            gasLimit: params.gasLimit || params.gas
+          };
+
+          deferred = dune.contract.originate(originateParams);
+
+          try {
+            const receipt = await deferred;
+            context.promiEvent.eventEmitter.emit("receipt", receipt);
+            context.promiEvent.eventEmitter.emit(
+              "transactionHash",
+              receipt.hash
+            );
+
+            const contractInstance = await receipt.contract();
+            contractInstance.transactionHash = receipt.hash;
+            context.transactionHash = contractInstance.transactionHash;
+            constructor.address = contractInstance.address;
+            context.logs = []; // none in Dune?
+            context.receipt = receipt;
+
+            context.promiEvent.resolve(new constructor(contractInstance));
+          } catch (error) {
+            context.promiEvent.eventEmitter.emit("error", error);
+            throw error;
+          }
+        })
+        .catch(promiEvent.reject);
+
+      return promiEvent.eventEmitter;
+    };
+  },
+
+  // end DUNE
 
   /**
    * Begins listening for an event OR manages the event callback

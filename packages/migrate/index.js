@@ -192,8 +192,18 @@ const Migrate = {
 
     // Two possible Migrations.sol's (lintable/unlintable)
     const lastCompletedMigration = async migrationsInstance => {
-      const { tezos } = migrationsInstance.constructor.interfaceAdapter;
+      const { tezos, dune } = migrationsInstance.constructor.interfaceAdapter;
       if (tezos) {
+        try {
+          const {
+            last_completed_migration
+          } = await migrationsInstance.storage();
+          return last_completed_migration;
+        } catch (error) {
+          throw error;
+        }
+      }
+      if (dune) {
         try {
           const {
             last_completed_migration

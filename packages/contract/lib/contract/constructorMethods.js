@@ -29,7 +29,7 @@ module.exports = Contract => ({
 
   new() {
     utils.checkProvider(this);
-    const { web3, tezos } = this.interfaceAdapter;
+    const { web3, tezos, dune } = this.interfaceAdapter;
 
     if (web3) {
       if (!this.bytecode || this.bytecode === "0x") {
@@ -58,10 +58,22 @@ module.exports = Contract => ({
 
       return execute.deployTezos.call(this)(...arguments);
     }
+
+    if (dune) {
+      if (!this.michelson) {
+        throw new Error(
+          `${
+            this.contractName
+          } error: contract michelson not set. Can't deploy new instance.\n`
+        );
+      }
+
+      return execute.deployDune.call(this)(...arguments);
+    }
   },
 
   async at(address) {
-    const { web3, tezos } = this.interfaceAdapter;
+    const { web3, tezos, dune } = this.interfaceAdapter;
     if (web3) {
       if (
         address == null ||
@@ -116,11 +128,37 @@ module.exports = Contract => ({
         throw error;
       }
     }
+
+    if (dune) {
+      if (
+        address == null ||
+        typeof address !== "string" ||
+        address.length !== 36
+      ) {
+        throw new Error(
+          `Invalid address passed to ${this.contractName}.at(): ${address}`
+        );
+      }
+
+      try {
+        await this.detectNetwork();
+        const contractInstance = await dune.contract.at(address);
+        if (
+          this._json.networks[this.network_id] &&
+          this._json.networks[this.network_id].address === address
+        ) {
+          contractInstance.transactionHash = this.transactionHash;
+        }
+        return new this(contractInstance);
+      } catch (error) {
+        throw error;
+      }
+    }
   },
 
   async deployed() {
     utils.checkProvider(this);
-    const { web3, tezos } = this.interfaceAdapter;
+    const { web3, tezos, dune } = this.interfaceAdapter;
 
     if (web3) {
       try {
@@ -142,6 +180,19 @@ module.exports = Contract => ({
         utils.checkNetworkArtifactMatch(this);
         utils.checkDeployment(this);
         const contractInstance = await tezos.contract.at(this.address);
+        contractInstance.transactionHash = this.transactionHash;
+        return new this(contractInstance);
+      } catch (error) {
+        throw error;
+      }
+    }
+
+    if (dune) {
+      try {
+        await this.detectNetwork();
+        utils.checkNetworkArtifactMatch(this);
+        utils.checkDeployment(this);
+        const contractInstance = await dune.contract.at(this.address);
         contractInstance.transactionHash = this.transactionHash;
         return new this(contractInstance);
       } catch (error) {
@@ -216,7 +267,7 @@ module.exports = Contract => ({
 
   async setWallet(wallet) {
     this.configureNetwork();
-    const { web3, tezos } = this.interfaceAdapter;
+    const { web3, tezos, dune } = this.interfaceAdapter;
 
     if (web3) web3.eth.accounts.wallet = wallet;
     if (tezos) {
@@ -244,10 +295,35 @@ module.exports = Contract => ({
       // TODO: add logic to check if user is importing a psk w/ password
       throw Error(`No faucet account or secret key detected.`);
     }
+    if (dune) {
+      let { email, password, mnemonic, secret, secretKey } = wallet;
+
+      if (mnemonic) {
+        // here we import user's faucet account:
+        // email, password, mnemonic, & secret are all REQUIRED.
+        if (Array.isArray(mnemonic)) mnemonic = mnemonic.join(" ");
+        try {
+          await dune.importKey(email, password, mnemonic, secret);
+        } catch (error) {
+          throw Error(`Faucet account invalid or incorrectly imported.`);
+        }
+      }
+
+      if (secretKey) {
+        try {
+          await dune.importKey(secretKey);
+        } catch (error) {
+          throw Error(`Secret key invalid or incorrectly imported.`);
+        }
+      }
+
+      // TODO: add logic to check if user is importing a psk w/ password
+      throw Error(`No faucet account or secret key detected.`);
+    }
   },
 
   async storageSchema() {
-    const { tezos } = this.interfaceAdapter;
+    const { tezos, dune } = this.interfaceAdapter;
     if (tezos) {
       let schema;
       const { Schema } = require("@taquito/michelson-encoder");
@@ -265,7 +341,26 @@ module.exports = Contract => ({
 
       return schema.ExtractSchema();
     }
-    throw new Error("Method only available for Tezos contract abstractions");
+    if (dune) {
+      let schema;
+      const { Schema } = require("@taquito/michelson-encoder");
+
+      try {
+        schema = new Schema(JSON.parse(this.michelson)[1].args[0]);
+      } catch (error) {
+        if (error instanceof SyntaxError) {
+          throw new Error(
+            `Problem parsing artifact: ${this.contractName}.michelson.`
+          );
+        }
+        throw error;
+      }
+
+      return schema.ExtractSchema();
+    }
+    throw new Error(
+      "Method only available for Tezos/Dune contract abstractions"
+    );
   },
 
   // Overrides the deployed address to null.

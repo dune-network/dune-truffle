@@ -112,6 +112,103 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@dune-network/code-utils@^1.2.14":
+  version "1.2.14"
+  resolved "https://registry.yarnpkg.com/@truffle/code-utils/-/code-utils-1.2.14.tgz#3828953eebb7a845a174a7927d0938b792e080f4"
+  integrity sha512-TucOf6GqW/uE47rAnwT00fi0ltaeTPZ2NcQEwPVvf4X+0xeJ90hq3dr78JKzrxgPHOzyok2MYaB+qdkZWcrz/w==
+  dependencies:
+    source-map-support "^0.5.16"
+
+"@dune-network/compile-solidity@^4.2.27":
+  version "4.2.27"
+  resolved "https://registry.yarnpkg.com/@truffle/compile-solidity/-/compile-solidity-4.2.27.tgz#3d028f14075e15d9db274b4e146eb1546fea96f3"
+  integrity sha512-Z9tuxQJY0Gh0HkyQ1vReACaMJzMe6Soop/KWPNM4zp4nVUEUiH6n77krCyYTSX1RpRqJNAZ+Iev4gwMwiBjyvg==
+  dependencies:
+    "@truffle/config" "^1.2.17"
+    "@truffle/contract-sources" "^0.1.7"
+    "@truffle/error" "^0.0.8"
+    "@truffle/expect" "^0.0.13"
+    colors "^1.1.2"
+    debug "^4.1.0"
+    fs-extra "^8.1.0"
+    ora "^3.4.0"
+    original-require "^1.0.1"
+    request "^2.85.0"
+    request-promise "^4.2.2"
+    require-from-string "^2.0.2"
+    semver "^5.6.0"
+    solc "^0.6.0"
+
+"@dune-network/http-utils@^6.2.1-beta.0":
+  version "6.2.1-beta.0"
+  resolved "https://registry.yarnpkg.com/@dune-network/http-utils/-/http-utils-6.2.1-beta.0.tgz#97f8ea82daace89a390e691b75d76e7ac3407b9e"
+  integrity sha512-0XTuVBp5eF5wDQPBqQUR4zVjjL4tbhfyw7O2smq9w8J91ryLpsHuoGbTOVmZeSeG8upTy5toGGst4ttAHjeBjg==
+  dependencies:
+    xhr2-cookies "^1.1.0"
+
+"@dune-network/michelson-encoder@^6.2.1-beta.0":
+  version "6.2.1-beta.0"
+  resolved "https://registry.yarnpkg.com/@dune-network/michelson-encoder/-/michelson-encoder-6.2.1-beta.0.tgz#e7119e74f572cdb62fefc8e6785a03e541cfec88"
+  integrity sha512-O8tXKYdyadoGy67GIhvf6cMzGOPXkvNRUxmbY18czuIdpmfLiMY+f/T9PQloK66FY0Fqhp4BpGfuzZaTJrefdA==
+  dependencies:
+    "@dune-network/utils" "^6.2.1-beta.0"
+    bignumber.js "^9.0.0"
+    fast-json-stable-stringify "^2.1.0"
+
+"@dune-network/provider@^0.2.9", "@truffle/provider@^0.2.9":
+  name "@dune-network/provider"
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@truffle/provider/-/provider-0.2.9.tgz#689941899d04fef50aad81ed6c74f89cb76482b3"
+  integrity sha512-C83cXOjhpvzEhQJxd0hfjX9jW+IMS7P+vLlVuhi1SMK5wBQNvZIb8i6VPnhNBMJV9BHAQx2NlgDcWIFAVVf5Rw==
+  dependencies:
+    "@truffle/error" "^0.0.8"
+    "@truffle/interface-adapter" "^0.4.6"
+    web3 "1.2.1"
+
+"@dune-network/rpc@^6.2.1-beta.0":
+  version "6.2.1-beta.0"
+  resolved "https://registry.yarnpkg.com/@dune-network/rpc/-/rpc-6.2.1-beta.0.tgz#3500d2d3ee3b15cbc71fca750aa884e960593121"
+  integrity sha512-+65by0q9a7IZa6ZpJv3AxGPpA3vtLngv/O9b6ZdVJvyLFApJo9lUiUuobt/L499lcnJyuVN4j9vflLfYipy0Yw==
+  dependencies:
+    "@dune-network/http-utils" "^6.2.1-beta.0"
+    bignumber.js "^9.0.0"
+    lodash "^4.17.15"
+
+"@dune-network/signer@^6.2.1-beta.0":
+  version "6.2.1-beta.0"
+  resolved "https://registry.yarnpkg.com/@dune-network/signer/-/signer-6.2.1-beta.0.tgz#dfd2a182132992d40fac764bf6ddf51f6ab3b3e9"
+  integrity sha512-2YiHvPwDSWF/r0b6QBI90zICWbJd2oinSSqqFQKb6iTQiTX44JG40rWdxeC2oYwuilU9xpeUTuAudP5lvm3MTg==
+  dependencies:
+    "@dune-network/utils" "^6.2.1-beta.0"
+    bignumber.js "^9.0.0"
+    bip39 "^3.0.2"
+    elliptic "^6.5.1"
+    libsodium-wrappers "^0.7.5"
+    pbkdf2 "^3.0.17"
+    typedarray-to-buffer "^3.1.5"
+
+"@dune-network/taquito@6.2.1-beta.1":
+  version "6.2.1-beta.1"
+  resolved "https://registry.yarnpkg.com/@dune-network/taquito/-/taquito-6.2.1-beta.1.tgz#d2ecdddbc5d17acce5768a30a0d81d7cefee8239"
+  integrity sha512-No3v6HbuUKuI9VvW2eGirqp0iEHBugQnD9gIEdH5ASyIgN5Xm4MQ4Q1qH8f+ykGS3NHIggZWRf1UCB5KJdWNvA==
+  dependencies:
+    "@dune-network/http-utils" "^6.2.1-beta.0"
+    "@dune-network/michelson-encoder" "^6.2.1-beta.0"
+    "@dune-network/rpc" "^6.2.1-beta.0"
+    "@dune-network/signer" "^6.2.1-beta.0"
+    "@dune-network/utils" "^6.2.1-beta.0"
+    bignumber.js "^9.0.0"
+    rxjs "^6.5.3"
+
+"@dune-network/utils@^6.2.1-beta.0":
+  version "6.2.1-beta.0"
+  resolved "https://registry.yarnpkg.com/@dune-network/utils/-/utils-6.2.1-beta.0.tgz#71741b75aabbe494e01ac8e7e60ee7d434998240"
+  integrity sha512-Sn0cGgi9aI320l2epiEUq7nHPmIhyNh2oEJ5ko5FZSEDu1ZiorLDTPHMSHCCrsyaMTLZIQqs53NZU7sPKec9Xg==
+  dependencies:
+    blakejs "^1.1.0"
+    bs58check "^2.1.2"
+    buffer "^5.2.1"
+
 "@ensdomains/ens@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@ensdomains/ens/-/ens-0.4.0.tgz#bca927b4ac81f5da0ab1580a2dfea5289a95357a"
@@ -1087,12 +1184,28 @@
   dependencies:
     xhr2-cookies "^1.1.0"
 
+"@taquito/http-utils@^6.2.0-beta.0":
+  version "6.2.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@taquito/http-utils/-/http-utils-6.2.0-beta.0.tgz#e2b20caeda4bff7f85b0af735b310fb299044cd3"
+  integrity sha512-n3JViYTgCXXWVh6FT1wujAD7ctGEtuAIAPbUGCXOhJWUNyLYDFDcV8F1MDb9G4a+pp6pnvgBguCZxRdPa0z0uQ==
+  dependencies:
+    xhr2-cookies "^1.1.0"
+
 "@taquito/michelson-encoder@^6.1.1-beta.0":
   version "6.1.1-beta.0"
   resolved "https://registry.yarnpkg.com/@taquito/michelson-encoder/-/michelson-encoder-6.1.1-beta.0.tgz#b28be5e838c7c0b38db30c88c309f33aaa810622"
   integrity sha512-3/8+GYgiie72xrbF4539j63z/8O2Q9d0AANLW8D0Hs+f97uiZ48NcnZfGXulfkPwkOS9cs2OLww4AOPSzM6SlA==
   dependencies:
     "@taquito/utils" "^6.1.1-beta.0"
+    bignumber.js "^9.0.0"
+    fast-json-stable-stringify "^2.1.0"
+
+"@taquito/michelson-encoder@^6.2.0-beta.0":
+  version "6.2.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@taquito/michelson-encoder/-/michelson-encoder-6.2.0-beta.0.tgz#7f7e0e5efced75d864b6255cac4eb40f660a68ba"
+  integrity sha512-LLlov9AT/tREeXFIow7Mn4mZ2NgBa/n9NAVkHidWKcA2jzGPxtdOA3qo/nrpzagQvlTS6Afzaiw9A5v2E3jKWA==
+  dependencies:
+    "@taquito/utils" "^6.2.0-beta.0"
     bignumber.js "^9.0.0"
     fast-json-stable-stringify "^2.1.0"
 
@@ -1105,12 +1218,34 @@
     bignumber.js "^9.0.0"
     lodash "^4.17.15"
 
+"@taquito/rpc@^6.2.0-beta.0":
+  version "6.2.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@taquito/rpc/-/rpc-6.2.0-beta.0.tgz#a722c99af3f90151cdcd16418c781466c0df66a6"
+  integrity sha512-z7K3FJU1qVQm78/faGMmbkTTeHy+1uwgIskRICwH13AOrvrtPJPNhq1ektXWztMWUD06CCcs+fYa4ifuvttlVQ==
+  dependencies:
+    "@taquito/http-utils" "^6.2.0-beta.0"
+    bignumber.js "^9.0.0"
+    lodash "^4.17.15"
+
 "@taquito/signer@^6.1.1-beta.0":
   version "6.1.1-beta.0"
   resolved "https://registry.yarnpkg.com/@taquito/signer/-/signer-6.1.1-beta.0.tgz#60f84d9dc9e6ed2376bda4ae08416282f0e3f6f7"
   integrity sha512-sIvcnXeQP5osBPyW0cPRchx74CgcprXRjKt10dy2j0ugwwwOIRYhuHeG4koVn0uqIbH5SdaFjYy0twZpgC5hLg==
   dependencies:
     "@taquito/utils" "^6.1.1-beta.0"
+    bignumber.js "^9.0.0"
+    bip39 "^3.0.2"
+    elliptic "^6.5.1"
+    libsodium-wrappers "^0.7.5"
+    pbkdf2 "^3.0.17"
+    typedarray-to-buffer "^3.1.5"
+
+"@taquito/signer@^6.2.0-beta.0":
+  version "6.2.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@taquito/signer/-/signer-6.2.0-beta.0.tgz#40fbc38564d8245a5e5a61565b80d1c67371fe75"
+  integrity sha512-tcam0EQV7m/MZSSnYQK2HPtNY0mFo/oousbC0PmS4RdxhvldLAYaE7psq5eUKn80SPh/zobR4mWMkh8FOoyzVQ==
+  dependencies:
+    "@taquito/utils" "^6.2.0-beta.0"
     bignumber.js "^9.0.0"
     bip39 "^3.0.2"
     elliptic "^6.5.1"
@@ -1130,6 +1265,19 @@
     bignumber.js "^9.0.0"
     rxjs "^6.5.3"
 
+"@taquito/taquito@6.2.0-beta.0":
+  version "6.2.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@taquito/taquito/-/taquito-6.2.0-beta.0.tgz#fc415c867ded54d57086e39601ab4bd302e3af69"
+  integrity sha512-LokpyK8JX+sbmGF1dJteR7IE4oy3Q7BUz7guS0+jg6re3J1GKrpYCH0iBlZuC+Id11Onkbez7LH4ZekDHDuzCA==
+  dependencies:
+    "@taquito/http-utils" "^6.2.0-beta.0"
+    "@taquito/michelson-encoder" "^6.2.0-beta.0"
+    "@taquito/rpc" "^6.2.0-beta.0"
+    "@taquito/signer" "^6.2.0-beta.0"
+    "@taquito/utils" "^6.2.0-beta.0"
+    bignumber.js "^9.0.0"
+    rxjs "^6.5.3"
+
 "@taquito/utils@^6.1.1-beta.0":
   version "6.1.1-beta.0"
   resolved "https://registry.yarnpkg.com/@taquito/utils/-/utils-6.1.1-beta.0.tgz#f31d46f69f5e36c436e899add2fc0350b1cc166b"
@@ -1139,41 +1287,23 @@
     bs58check "^2.1.2"
     buffer "^5.2.1"
 
-"@dune-network/code-utils@^1.2.14":
-  version "1.2.14"
-  resolved "https://registry.yarnpkg.com/@truffle/code-utils/-/code-utils-1.2.14.tgz#3828953eebb7a845a174a7927d0938b792e080f4"
-  integrity sha512-TucOf6GqW/uE47rAnwT00fi0ltaeTPZ2NcQEwPVvf4X+0xeJ90hq3dr78JKzrxgPHOzyok2MYaB+qdkZWcrz/w==
+"@taquito/utils@^6.2.0-beta.0":
+  version "6.2.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@taquito/utils/-/utils-6.2.0-beta.0.tgz#4acd230919b15b79af123cfec7b2889ca219445d"
+  integrity sha512-YBC3C/9n7zmC4LHMpF99h50H75ENC7vUR0JCvTSJK0iHWIQ+G/6hJQGRCkXFSa7fp3bkWB/F+Zas4wejLLVjLQ==
   dependencies:
-    source-map-support "^0.5.16"
+    blakejs "^1.1.0"
+    bs58check "^2.1.2"
+    buffer "^5.2.1"
 
-"@dune-network/compile-solidity@^4.2.27":
-  version "4.2.27"
-  resolved "https://registry.yarnpkg.com/@truffle/compile-solidity/-/compile-solidity-4.2.27.tgz#3d028f14075e15d9db274b4e146eb1546fea96f3"
-  integrity sha512-Z9tuxQJY0Gh0HkyQ1vReACaMJzMe6Soop/KWPNM4zp4nVUEUiH6n77krCyYTSX1RpRqJNAZ+Iev4gwMwiBjyvg==
-  dependencies:
-    "@dune-network/config" "^1.2.17"
-    "@dune-network/contract-sources" "^0.1.7"
-    "@dune-network/error" "^0.0.8"
-    "@dune-network/expect" "^0.0.13"
-    colors "^1.1.2"
-    debug "^4.1.0"
-    fs-extra "^8.1.0"
-    ora "^3.4.0"
-    original-require "^1.0.1"
-    request "^2.85.0"
-    request-promise "^4.2.2"
-    require-from-string "^2.0.2"
-    semver "^5.6.0"
-    solc "^0.6.0"
-
-"@dune-network/config@^1.2.17":
+"@truffle/config@^1.2.17":
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/@truffle/config/-/config-1.2.17.tgz#2dc75cd2022b583b7c182782507caddd3e159ce6"
   integrity sha512-MvKc3VKQ/yGD9/+lXDPJly3S9dIQq4mDa/2Nlr+owSbErg41blX9pUGljrluA1J3IiiPujrYUAG/EuNwObz28A==
   dependencies:
-    "@dune-network/error" "^0.0.8"
-    "@dune-network/events" "^0.0.5"
-    "@dune-network/provider" "^0.2.9"
+    "@truffle/error" "^0.0.8"
+    "@truffle/events" "^0.0.5"
+    "@truffle/provider" "^0.2.9"
     configstore "^4.0.0"
     find-up "^2.1.0"
     lodash.assignin "^4.2.0"
@@ -1182,7 +1312,7 @@
     original-require "1.0.1"
     source-map-support "^0.5.16"
 
-"@dune-network/contract-sources@^0.1.7":
+"@truffle/contract-sources@^0.1.7":
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/@truffle/contract-sources/-/contract-sources-0.1.7.tgz#11d7543b61141def64c8752eb49759ff5aee7580"
   integrity sha512-scv54DrRsgyRfFt+XntMNJDDpyI7d4rhoR5Ab6mlCaq9rkuYDjv2ylVQWOCjPjsOOEQ5EGYPgs22ZkS10oi70A==
@@ -1190,12 +1320,12 @@
     debug "^4.1.0"
     glob "^7.1.2"
 
-"@dune-network/error@^0.0.8":
+"@truffle/error@^0.0.8":
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/@truffle/error/-/error-0.0.8.tgz#dc94ca36393403449d4b7461bf9452c241e53ec1"
   integrity sha512-x55rtRuNfRO1azmZ30iR0pf0OJ6flQqbax1hJz+Avk1K5fdmOv5cr22s9qFnwTWnS6Bw0jvJEoR0ITsM7cPKtQ==
 
-"@dune-network/events@^0.0.5":
+"@truffle/events@^0.0.5":
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/@truffle/events/-/events-0.0.5.tgz#ee69d4603b2befc54060b02e111f56405d0f10ac"
   integrity sha512-yQ7vR2IQAswlEOO5onLOP71yfjbmYw0QPa8lrVzqfYZ5WrSI2HSbhNNVvy9boC73kcFkm7Kiq/HYU+UM1l4bNg==
@@ -1203,12 +1333,12 @@
     emittery "^0.4.1"
     ora "^3.4.0"
 
-"@dune-network/expect@^0.0.13":
+"@truffle/expect@^0.0.13":
   version "0.0.13"
   resolved "https://registry.yarnpkg.com/@truffle/expect/-/expect-0.0.13.tgz#c8e23edc1a1c3b13f768611e6199113026cf8bf2"
   integrity sha512-iLRALoFphCCA2ygDjyG+633dCMp81i09+V/oMDkdvDdYDF6KHjSt3Ov9eZMDnzl5PVBvmf2221U4qXSFB8V4fg==
 
-"@dune-network/interface-adapter@^0.4.6":
+"@truffle/interface-adapter@^0.4.6":
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/@truffle/interface-adapter/-/interface-adapter-0.4.6.tgz#d904e2ae6e03712f310eb4da858a1fe07fa27d11"
   integrity sha512-FZAUb7tx/7VbxpAbo70+K2v22j1O7y4BwhWypRwYpf1YbE2C1OCo/L8zInaW5LfzRd2BEsfb2GjUgbK9VaFrDA==
@@ -1216,15 +1346,6 @@
     bn.js "^4.11.8"
     ethers "^4.0.32"
     source-map-support "^0.5.16"
-    web3 "1.2.1"
-
-"@dune-network/provider@^0.2.9":
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/@truffle/provider/-/provider-0.2.9.tgz#689941899d04fef50aad81ed6c74f89cb76482b3"
-  integrity sha512-C83cXOjhpvzEhQJxd0hfjX9jW+IMS7P+vLlVuhi1SMK5wBQNvZIb8i6VPnhNBMJV9BHAQx2NlgDcWIFAVVf5Rw==
-  dependencies:
-    "@dune-network/error" "^0.0.8"
-    "@dune-network/interface-adapter" "^0.4.6"
     web3 "1.2.1"
 
 "@trufflesuite/chromafi@^2.1.2":

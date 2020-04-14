@@ -80,6 +80,9 @@ class Console extends EventEmitter {
           tezos: this.interfaceAdapter.tezos
             ? this.interfaceAdapter.tezos
             : undefined,
+          dune: this.interfaceAdapter.dune
+            ? this.interfaceAdapter.dune
+            : undefined,
           accounts
         },
         interpreter: this.interpret.bind(this),

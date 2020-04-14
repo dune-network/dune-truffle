@@ -71,7 +71,7 @@ class Migration {
    * @param  {Object}   interfaceAdapter interfaceAdapter
    */
   async _deploy(options, deployer, resolver, migrateFn, interfaceAdapter) {
-    const { web3, tezos } = interfaceAdapter;
+    const { web3, tezos, dune } = interfaceAdapter;
     try {
       await deployer.start();
 
@@ -106,6 +106,7 @@ class Migration {
         let receipt;
         if (web3) receipt = await migrations.setCompleted(this.number);
         if (tezos) receipt = await migrations.main(this.number);
+        if (dune) receipt = await migrations.main(this.number);
 
         if (!this.dryRun) {
           const data = { receipt, message };
@@ -115,6 +116,7 @@ class Migration {
 
       if (web3) await this.emitter.emit("postEvmMigrate", this.isLast);
       if (tezos) await this.emitter.emit("postTezosMigrate", this.isLast);
+      if (dune) await this.emitter.emit("postDuneMigrate", this.isLast);
 
       // Save artifacts to local filesystem
       await options.artifactor.saveAll(resolver.contracts());
@@ -198,6 +200,7 @@ class Migration {
     const context = {
       web3: interfaceAdapter.web3 ? interfaceAdapter.web3 : undefined,
       tezos: interfaceAdapter.tezos ? interfaceAdapter.tezos : undefined,
+      dune: interfaceAdapter.tezos ? interfaceAdapter.dune : undefined,
       config: this.config
     };
 

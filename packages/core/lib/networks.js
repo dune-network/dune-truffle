@@ -14,6 +14,11 @@ const tezosNetworkChainIdMapping = {
   zeronet: "NetXKakFj1A7ouL"
 };
 
+const duneNetworkChainIdMapping = {
+  mainnet: "NetXwhYbWGa82xo",
+  testnet: "NetXXqTJEhqFrsn"
+};
+
 const Networks = {
   deployed: async function(options) {
     let files;
@@ -97,6 +102,22 @@ const Networks = {
           networkName = configuredNetworkName;
           networkNames.push(networkName);
         }
+        // begin DUNE
+        if (
+          config.networks[configuredNetworkName].type === "dune" &&
+          Object.keys(duneNetworkChainIdMapping).includes(
+            configuredNetworkName
+          ) &&
+          duneNetworkChainIdMapping[configuredNetworkName] === networkName
+        ) {
+          networks[configuredNetworkName] = networks[networkName];
+          delete networks[networkName];
+          networkNames = networkNames.filter(item => item !== networkName);
+          config.networks[configuredNetworkName].network_id = networkName;
+          networkName = configuredNetworkName;
+          networkNames.push(networkName);
+        }
+        // end DUNE
         if (networkName === configuredNetworkName) {
           found = true;
           break;

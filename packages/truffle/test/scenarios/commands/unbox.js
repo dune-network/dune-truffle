@@ -22,7 +22,7 @@ describe("truffle unbox [ @standalone ]", () => {
   });
 
   describe("when run without arguments", () => {
-    it("unboxes tezos-bare-box", async () => {
+    it("unboxes dune-bare-box", async () => {
       await CommandRunner.run("unbox --force", config);
       assert(
         fse.pathExistsSync(

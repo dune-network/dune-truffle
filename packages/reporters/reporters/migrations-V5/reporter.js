@@ -106,6 +106,10 @@ class Reporter {
         "postTezosMigrate",
         this.postTezosMigrate.bind(this)
       );
+      this.migration.emitter.on(
+        "postDuneMigrate",
+        this.postDuneMigrate.bind(this)
+      );
       this.migration.emitter.on("error", this.error.bind(this));
     }
 
@@ -116,6 +120,10 @@ class Reporter {
       this.deployer.emitter.on(
         "postTezosDeploy",
         this.postTezosDeploy.bind(this)
+      );
+      this.deployer.emitter.on(
+        "postDuneDeploy",
+        this.postDuneDeploy.bind(this)
       );
       this.deployer.emitter.on("deployFailed", this.deployFailed.bind(this));
       this.deployer.emitter.on("linking", this.linking.bind(this));
@@ -159,6 +167,26 @@ class Reporter {
    * started running. Calling this method resets the gas counters for migrations totals
    */
   getTezosTotals() {
+    const gas = this.currentGasTotal.clone();
+    const cost = web3Utils.fromWei(this.currentCostTotal, "mwei");
+    this.finalCostTotal = this.finalCostTotal.add(this.currentCostTotal);
+
+    this.currentGasTotal = new web3Utils.BN(0);
+    this.currentCostTotal = new web3Utils.BN(0);
+
+    return {
+      gas: gas.toString(10),
+      cost,
+      finalCost: web3Utils.fromWei(this.finalCostTotal, "mwei"),
+      deployments: this.deployments.toString()
+    };
+  }
+
+  /**
+   * Retrieves Tezos gas usage totals per migrations file / totals since the reporter
+   * started running. Calling this method resets the gas counters for migrations totals
+   */
+  getDuneTotals() {
     const gas = this.currentGasTotal.clone();
     const cost = web3Utils.fromWei(this.currentCostTotal, "mwei");
     this.finalCostTotal = this.finalCostTotal.add(this.currentCostTotal);
@@ -385,6 +413,31 @@ class Reporter {
     }
   }
 
+  /**
+   * Run after a Tezos  migrations file has completed and the migration has been saved.
+   * @param  {Boolean} isLast  true if this the last file in the sequence.
+   */
+  async postDuneMigrate(isLast) {
+    let data = { dune: true };
+    data.number = this.summary[this.currentFileIndex].number;
+    data.cost = this.getDuneTotals().cost;
+    this.summary[this.currentFileIndex].totalCost = data.cost;
+
+    let message = this.messages.steps("postMigrate", data);
+    this.deployer.logger.log(message);
+
+    if (isLast) {
+      data.totalDeployments = this.getDuneTotals().deployments;
+      data.finalCost = this.getDuneTotals().finalCost;
+
+      this.summary.totalDeployments = data.totalDeployments;
+      this.summary.finalCost = data.finalCost;
+
+      message = this.messages.steps("lastMigrate", data);
+      this.deployer.logger.log(message);
+    }
+  }
+
   // ----------------------------  Deployment Handlers --------------------------------------------
 
   /**
@@ -534,6 +587,72 @@ class Reporter {
   }
 
   /**
+   * Run after a Tezos deployment instance has resolved. This handler collects deployment cost
+   * data and stores it a `summary` map so that it can later be replayed in an interactive
+   * preview (e.g. dry-run --> real). Also passes this data to the messaging utility for
+   * output formatting.
+   * @param  {Object} data
+   */
+  async postDuneDeploy(data) {
+    let message;
+    if (data.deployed) {
+      const tx = data.receipt.results.filter(
+        result => result.kind === "origination"
+      )[0];
+      let burn = new web3Utils.BN(0);
+
+      const block = await data.contract.interfaceAdapter.getBlock(
+        data.receipt.includedInBlock
+      );
+
+      if (!block) return this.postDuneDeploy(data);
+
+      data.timestamp = block.timestamp;
+
+      const balance = new web3Utils.BN(
+        await data.contract.interfaceAdapter.getBalance(tx.source)
+      );
+      const gasUsed = new web3Utils.BN(
+        tx.metadata.operation_result.consumed_gas
+      );
+      const storageUsed = new web3Utils.BN(
+        tx.metadata.operation_result.paid_storage_size_diff
+      );
+      const fee = new web3Utils.BN(tx.fee);
+      tx.metadata.operation_result.balance_updates.forEach(
+        update => (burn = burn.add(new web3Utils.BN(update.change)))
+      );
+      burn = burn.abs();
+      const value = new web3Utils.BN(tx.balance);
+      const cost = fee.add(value).add(burn);
+
+      data.from = tx.source;
+      data.balance = web3Utils.fromWei(balance, "mwei");
+      data.gasUsed = gasUsed.toString(10);
+      data.storageUsed = storageUsed.toString(10);
+      data.fee = web3Utils.fromWei(fee, "kwei");
+      data.burn = web3Utils.fromWei(burn, "mwei");
+      data.value = web3Utils.fromWei(value, "mwei");
+      data.cost = web3Utils.fromWei(cost, "mwei");
+
+      this.currentGasTotal = this.currentGasTotal.add(gasUsed);
+      this.currentCostTotal = this.currentCostTotal.add(cost);
+      this.currentAddress = this.from;
+      this.deployments++;
+
+      if (this.summary[this.currentFileIndex]) {
+        this.summary[this.currentFileIndex].deployments.push(data);
+      }
+
+      message = this.messages.steps("duneDeployed", data);
+    } else {
+      message = this.messages.steps("reusing", data);
+    }
+
+    this.deployer.logger.log(message);
+  }
+
+  /**
    * Runs on deployment error. Forwards err to the error parser/dispatcher after shutting down
    * any `pending` UI.any `pending` UI. Returns the error message OR logs it out from the reporter
    * if data.log is true.
@@ -609,7 +728,9 @@ class Reporter {
     const { networks, network } = this.deployer;
     let message;
 
-    if (networks[network].type === "tezos")
+    if (networks[network].type === "dune")
+      message = this.messages.steps("opHash", data);
+    else if (networks[network].type === "tezos")
       message = this.messages.steps("opHash", data);
     else message = this.messages.steps("hash", data);
     this.deployer.logger.log(message);
