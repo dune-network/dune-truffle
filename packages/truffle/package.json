@@ -1,5 +1,5 @@
 {
-  "name": "truffle",
+  "name": "@dune-network/truffle",
   "description": "Truffle - Simple development framework for Ethereum",
   "author": "consensys.net",
   "homepage": "https://github.com/dune-network/truffle/",
