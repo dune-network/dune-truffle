@@ -8,7 +8,7 @@
   "bugs": {
     "url": "https://github.com/dune-network/truffle/issues"
   },
-  "version": "3.2.0-tezos.4",
+  "version": "3.2.0-dune.4",
   "main": "index.js",
   "scripts": {
     "test": "mocha --no-warnings --timeout 10000 --exit"
@@ -16,16 +16,16 @@
   "dependencies": {
     "@ensdomains/ens": "^0.4.0",
     "@ensdomains/resolver": "^0.2.0",
-    "@dune-network/contract": "^4.3.0-tezos.1",
-    "@dune-network/expect": "^0.1.0-tezos.0",
+    "@dune-network/contract": "^4.3.0-dune.1",
+    "@dune-network/expect": "^0.1.0-dune.0",
     "emittery": "^0.4.0",
     "eth-ens-namehash": "^2.0.8",
     "ethereum-ens": "^0.8.0",
     "web3-utils": "1.2.2"
   },
   "devDependencies": {
-    "@dune-network/reporters": "^1.1.0-tezos.1",
-    "@dune-network/workflow-compile": "^2.3.0-tezos.1",
+    "@dune-network/reporters": "^1.1.0-dune.1",
+    "@dune-network/workflow-compile": "^2.3.0-dune.1",
     "ganache-core": "2.10.2",
     "mocha": "5.2.0",
     "sinon": "^7.3.2",

@@ -8,15 +8,15 @@
   "bugs": {
     "url": "https://github.com/dune-network/truffle/issues"
   },
-  "version": "2.1.0-tezos.1",
+  "version": "2.1.0-dune.1",
   "main": "require.js",
   "scripts": {
     "test": "mocha"
   },
   "dependencies": {
-    "@dune-network/config": "^1.4.0-tezos.0",
-    "@dune-network/expect": "^0.1.0-tezos.0",
-    "@dune-network/interface-adapter": "^0.5.0-tezos.3",
+    "@dune-network/config": "^1.4.0-dune.0",
+    "@dune-network/expect": "^0.1.0-dune.0",
+    "@dune-network/interface-adapter": "^0.5.0-dune.3",
     "original-require": "1.0.1",
     "web3": "1.2.1"
   },

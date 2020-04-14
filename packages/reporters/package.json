@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "",
   "repository": "https://github.com/dune-network/truffle/tree/master/packages/reporters",
-  "version": "1.1.0-tezos.1",
+  "version": "1.1.0-dune.1",
   "main": "index.js",
   "scripts": {},
   "dependencies": {

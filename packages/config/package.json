@@ -1,6 +1,6 @@
 {
   "name": "@dune-network/config",
-  "version": "1.4.0-tezos.1",
+  "version": "1.4.0-dune.1",
   "description": "Utility for interacting with truffle-config.js files",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -34,9 +34,9 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@dune-network/error": "^0.1.0-tezos.0",
-    "@dune-network/events": "^0.1.0-tezos.1",
-    "@dune-network/provider": "^0.3.0-tezos.4",
+    "@dune-network/error": "^0.1.0-dune.0",
+    "@dune-network/events": "^0.1.0-dune.1",
+    "@dune-network/provider": "^0.3.0-dune.4",
     "configstore": "^4.0.0",
     "find-up": "^2.1.0",
     "lodash.assignin": "^4.2.0",
